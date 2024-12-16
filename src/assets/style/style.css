@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #152259;
+    background-color: #152259 !important;
     color: white;
 }
 .loader{
@@ -76,6 +76,10 @@ body{
     }
   }
   @media(max-width: 768px){
+    body{
+      background-color: #152259;
+      color: white;
+  }
     .loader{
       margin-top: 210px;
       padding: 0px;
@@ -94,6 +98,10 @@ body{
     }
   }
   @media(max-width: 425px){
+    body{
+      background-color: #152259;
+      color: white;
+  }
     .loader h1{
       font-size: 30px;
       line-height: 40px;
