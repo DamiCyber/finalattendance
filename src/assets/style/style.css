@@ -11,6 +11,9 @@
   color: white;
 }
 .loader {
+  position: relative;
+  top: 27%;
+  /* margin-top: 210px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
