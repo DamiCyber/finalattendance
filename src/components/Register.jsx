@@ -36,25 +36,28 @@ const Register = () => {
               <input type="password" placeholder='Confirm Password' />
             </div>
           </div>
-          <div className="button">b
-            <button >Register</button>
+          <div className="buttons">
+            <div className="button">
+              <button >Register</button>
+            </div>
+            <div className="option">
+              <h1>or</h1>
+            </div>
+            <div className="google-button">
+              <button className='google-button' >continue with Google</button>
+            </div>
+            <div className="account">
+              <p>Already have account? </p>
+              <Link to="/login" className='ink'>Login here</Link>
+            </div>
           </div>
-          <div className="option">
-            <h1>or</h1>
-          </div>
-          <div className="google-button">
-            <button className='google-button' >continue with Google</button>
-          </div>
-          <div className="account">
-            <p>Already have account? </p>
-            <Link to="/login" className='ink'>Login here</Link>
-          </div>
+
         </div>
         <div className="second-con">
           <div className="secondbox">
             <div className="logo">
-              <h1>A</h1>
-              {/* <img src="@" alt="" /> */}
+              <h3></h3>
+              <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734938938/amend_lntakp.png" alt="" />
               <div className="text1">
                 <h1>Attendipen</h1>
               </div>

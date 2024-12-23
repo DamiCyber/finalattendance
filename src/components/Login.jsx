@@ -36,8 +36,7 @@ const Login = () => {
         <div className="second-con">
           <div className="secondbox">
             <div className="logo">
-              <h1>A</h1>
-              {/* <img src="@" alt="" /> */}
+              <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734938938/amend_lntakp.png" alt="" />
               <div className="text1">
                 <h1>Attendipen</h1>
               </div>
