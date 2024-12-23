@@ -4,27 +4,19 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-.body {
+.container{
   width: 100%;
   height: 100vh;
   background-color: #152259;
   color: white;
 }
 .loader {
-  padding: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.loader h1 {
-  font-size: larger;
-  font-size: 66px;
-  line-height: 100px;
-  text-transform: uppercase;
-  font-weight: 900;
-}
+
 .dots-container {
   display: flex;
   align-items: center;
@@ -82,8 +74,9 @@
     background-color: #152259;
     color: white;
   }
-  .loader {
-    margin-top: 210px;
+  .loader  {
+    position:relative;
+    top:24%;
     padding: 0px;
   }
   .loader h1 {
