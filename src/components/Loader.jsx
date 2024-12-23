@@ -8,7 +8,7 @@ const Loader = () => {
         setloading(true)
         setTimeout(() => {
             navigate("/Login")
-        },90000)
+        },6000)
     })
     if (loading) {
         return (
