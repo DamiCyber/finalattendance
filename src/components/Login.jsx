@@ -36,10 +36,7 @@ const Login = () => {
         <div className="second-con">
           <div className="secondbox">
             <div className="logo">
-              <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734938938/amend_lntakp.png" alt="" />
-              <div className="text1">
-                <h1>Attendipen</h1>
-              </div>
+            <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734982730/attend_in8wmy.png" alt="" />
             </div>
             <div className="text2">
               <p>"Attendance is the first step to success, be present to win."</p>

@@ -195,10 +195,18 @@ button {
   font-weight: 600;
   line-height: normal;
 }
+.logo h3 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .account {
   display: flex;
   margin-left: 100px;
-  padding:3px !important;
+  padding: 3px !important;
 }
 .ink {
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
@@ -241,7 +249,8 @@ button {
   justify-content: space-between;
 }
 .logo img {
-  width: 100px;
+  margin-top: -20px;
+  width: 200px;
 }
 @media (max-width: 770px) {
   body {

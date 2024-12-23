@@ -56,11 +56,8 @@ const Register = () => {
         <div className="second-con">
           <div className="secondbox">
             <div className="logo">
-              <h3></h3>
-              <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734938938/amend_lntakp.png" alt="" />
-              <div className="text1">
-                <h1>Attendipen</h1>
-              </div>
+              <h3>Welcome to</h3>
+              <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734982730/attend_in8wmy.png" alt="" />
             </div>
             <div className="text2">
               <p>“Attendance is the purest
