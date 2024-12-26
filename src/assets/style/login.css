@@ -324,6 +324,7 @@ button {
     padding: 0px;
   }
   .first-con h2 {
+    margin-top: -65px;
     font-size: 25px;
   }
   .first-con h4 {
