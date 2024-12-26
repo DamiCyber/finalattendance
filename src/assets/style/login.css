@@ -52,7 +52,7 @@
   background-color: #509cdb;
 }
 .login {
-  gap: 15px;
+  gap: 10px;
   color: var(--D-1, #122539);
   display: flex;
   flex-direction: column;
@@ -191,7 +191,7 @@ button {
     left: 10%;
     background-color: #152259;
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     height: 400px;
   }
 }
@@ -330,7 +330,8 @@ button {
     font-size: 18px;
   }
   .first-con p {
-    font-size: 14px;
+    width: 290px!important;
+    font-size: 12px;
   }
   label {
     font-size: 13px;
@@ -341,7 +342,7 @@ button {
   .forgot-password {
     position: relative;
     left: 49%;
-    font-size: 13px;
+    font-size: 12px;
   }
   .account {
     position: relative;
@@ -355,7 +356,7 @@ button {
   }
 
   .account p {
-    font-size: 11px;
+    font-size: 8px;
     padding: 0px;
     width: 100%;
   }
