@@ -206,8 +206,8 @@ button {
 }
 @media (max-width: 430px) {
   form {
-    overflow-x: hidden;
-    margin-top: -5px;
+    /* overflow-x: hidden; */
+    margin-top: -45px;
     width: 100%;
   }
   .first-con {
