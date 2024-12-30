@@ -55,16 +55,10 @@ const Register = () => {
         </div>
        </form>
         <div className="second-cont">
-          {/* <div className="secondbox">
-            <div className="logo">
-              <h3>Welcome to</h3>
-              <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734982730/attend_in8wmy.png" alt="" />
-            </div>
-            <div className="text2">
+        <div className="text2">
               <p>“Attendance is the purest
                 form of dedication.”</p>
             </div>
-          </div> */}
         </div>
       </div>
 

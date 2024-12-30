@@ -276,6 +276,9 @@ button {
     height: 100vh;
     background-color: white;
   }
+  form{
+    margin-top: -90px;
+  }
   .second-con {
     display: none;
   }
@@ -325,7 +328,7 @@ button {
   .login input {
     width: 300px;
   }
-  button {
+  .button {
     width: 300px;
   }
 }
@@ -334,7 +337,9 @@ button {
     height: 100vh;
     background-color: white;
   }
-
+  form{
+    margin-top: -90px;
+  }
   .first-con {
     position: relative;
     left: 45%;
@@ -392,7 +397,7 @@ button {
   .login input {
     width: 270px;
   }
-  button {
+  .button {
     width: 270px;
   }
 }
