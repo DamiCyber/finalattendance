@@ -1,28 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "../assets/style/register.css"
-// import { Link } from 'react-router-dom'
 const Register = () => {
   return (
     <div>
-      <div className="whole-con">
-        <div className="first-con">
+      <div className="whole-cont">
+       <form>
+       <div className="first-cont">
           <div className="text">
             <h2>Register</h2>
             <p>Welcome to the Attendipen! Please fill in
               <br /> the required information to create your account.</p>
           </div>
-          <div className="login-flex">
-            <div className="login-first">
+          <div className="register-flex">
+            <div className="register-first">
               <label htmlFor="">First Name</label>
               <input type="name" placeholder='First Name' />
             </div>
-            <div className="login-first left">
+            <div className="register-first left">
               <label htmlFor="">Last Name</label>
               <input type="name" placeholder='Last Name' />
             </div>
           </div>
-          <div className="login-second">
+          <div className="register-second">
             <label htmlFor="email">Onpassive Email ID</label>
             <input type="email" placeholder='Enter Email ID' />
           </div>
@@ -46,15 +46,16 @@ const Register = () => {
             <div className="google-button">
               <button className='google-button' >continue with Google</button>
             </div>
-            <div className="account">
+            <div className="Reg-account">
               <p>Already have account? </p>
-              <Link to="/login" className='ink'>Login here</Link>
+              <Link to="/login" className='inka'>Login here</Link>
             </div>
           </div>
 
         </div>
-        <div className="second-con">
-          <div className="secondbox">
+       </form>
+        <div className="second-cont">
+          {/* <div className="secondbox">
             <div className="logo">
               <h3>Welcome to</h3>
               <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1734982730/attend_in8wmy.png" alt="" />
@@ -63,7 +64,7 @@ const Register = () => {
               <p>“Attendance is the purest
                 form of dedication.”</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

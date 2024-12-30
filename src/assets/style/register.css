@@ -8,15 +8,15 @@ body {
   overflow: hidden;
   height: 100vh;
 }
-.whole-con {
+.whole-cont {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
-.first-con {
+.first-cont {
   position: relative;
   top: 8%;
   display: flex;
@@ -25,7 +25,7 @@ body {
   width: 50%;
   height: 100vh;
 }
-.first-con h2 {
+.first-cont h2 {
   color: var(--D-1, #122539);
   font-family: Poppins;
   font-size: 40px;
@@ -33,7 +33,7 @@ body {
   font-weight: 600;
   line-height: 60px;
 }
-.first-con h4 {
+.first-cont h4 {
   color: var(--D-2, #1f4062);
   font-family: Poppins;
   font-size: 24px;
@@ -44,7 +44,7 @@ body {
 .text p {
   line-height: 30px;
 }
-.first-con p {
+.first-cont p {
   color: var(--D-2, #1f4062);
   font-family: Poppins;
   font-size: 16px;
@@ -52,12 +52,12 @@ body {
   font-weight: 400;
   padding-bottom: 10px;
 }
-.second-con {
+.second-cont {
   width: 50%;
-  height: 730px;
+  height: 100vh;
   background-color: #509cdb;
 }
-.login-flex {
+.register-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,14 +66,14 @@ body {
 .left {
   margin-right: 40px;
 }
-.login-first {
+.register-first {
  
   gap: 15px;
   color: var(--D-1, #122539);
   display: flex;
   flex-direction: column;
 }
-.login-first input {
+.register-first input {
   text-indent: 20px;
   border-radius: 4px;
   border: 1px solid var(--D-4, #5a91cb);
@@ -82,7 +82,7 @@ body {
   height: 35px;
   width: 220px;
 }
-.login input::placeholder {
+.register-first input::placeholder {
   color: var(--D-5, #83acd8);
   font-family: Poppins;
   font-size: 14px;
@@ -91,13 +91,13 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.login-second {
+.register-second {
   gap: 15px;
   color: var(--D-1, #122539);
   display: flex;
   flex-direction: column;
 }
-.login-second input {
+.register-second input {
   text-indent: 20px;
   border-radius: 4px;
   border: 1px solid var(--D-4, #5a91cb);
@@ -106,7 +106,7 @@ body {
   height: 35px;
   width: 500px;
 }
-.login-first input::placeholder {
+.register-first input::placeholder {
   color: var(--D-5, #83acd8);
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -115,7 +115,7 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.login-second input::placeholder {
+.register-second input::placeholder {
   color: var(--D-5, #83acd8);
   font-family: Poppins;
   font-size: 14px;
@@ -206,12 +206,12 @@ button {
   font-weight: 400;
   line-height: normal;
 }
-.account {
+.Reg-account {
   display: flex;
   margin-left: 100px;
   padding: 3px !important;
 }
-.ink {
+.inka {
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
 }
 .account a {
@@ -222,19 +222,19 @@ button {
   font-style: normal;
   font-weight: 400;
 }
-.secondbox {
+/* .secondbox {
   padding: 50px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  top: 20%;
+  top: 0%;
   left: 20%;
   background-color: #152259;
   border-radius: 10px;
   width: 400px;
   height: 500px;
-}
+} */
 .text2 {
   width: 100%;
   color: var(--L-7, #e3f3fd);
@@ -279,10 +279,10 @@ button {
   .google-button {
     width: 300px;
   }
-  .account {
+  .Reg-account {
     display: flex;
     position: relative;
-    left: -80px;
+    /* left: -80px; */
     top: 10px;
     padding: 0px;
   }
@@ -334,7 +334,7 @@ button {
   .login-second input {
     width: 300px;
   }
-  .account {
+  .Reg-account {
     position: relative;
     left: 29%;
     margin: 0px;
@@ -382,7 +382,7 @@ button {
     font-size: 14px;
   }
 
-  .account {
+  .Reg-account {
     position: relative;
     left: 29%;
     margin: 0px;
@@ -447,7 +447,7 @@ button {
   .login-second input {
     width: 270px;
   }
-  .account {
+  .Reg-account {
     position: relative;
     left: 29%;
     margin: 0px;

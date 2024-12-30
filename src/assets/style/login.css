@@ -4,20 +4,30 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.err {
+  color: red;
+  font-size: 12px;
+}
+form {
+  z-index: 11111;
+  margin-top: 3px;
+  width: 50%;
+}
 .whole-con {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   width: 100%;
-  height: 100vh;
+  height: 100vh !important;
 }
 .first-con {
-  padding: 80px;
+  position: relative;
+  left: 7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   height: 100vh;
 }
 .first-con h2 {
@@ -37,6 +47,7 @@
   line-height: 50px;
 }
 .first-con p {
+  width: 100% !;
   color: var(--D-2, #1f4062);
   font-family: Poppins;
   font-size: 16px;
@@ -46,13 +57,16 @@
   padding-bottom: 20px;
 }
 .second-con {
-  width: 50%;
+  background-image:linear-gradient( rgba(90, 145, 203, 0.5), rgba(90, 145, 203, 0.5)), url("https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513605/unsplash_iQPr1XkF5F0_cbamt8.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+  width: 700px;
   color: white;
-  height: 100vh;
-  background-color: #509cdb;
 }
 .login {
-  gap: 10px;
+  gap: 8px;
   color: var(--D-1, #122539);
   display: flex;
   flex-direction: column;
@@ -70,7 +84,6 @@
   color: var(--D-5, #83acd8);
   font-family: Poppins;
   font-size: 14px;
-  padding: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -81,7 +94,6 @@
 }
 
 .remember label {
-  padding-left: 10px;
   color: var(--D-2, #1f4062);
   font-family: Poppins;
   font-size: 16px;
@@ -90,10 +102,11 @@
   line-height: normal;
 }
 .forgot-password {
-  padding-right: 24px;
+  position: relative;
+  right:15%;
   text-decoration: none;
   text-align: right;
-  color: var(--L-1, hsl(204, 88%, 53%));
+  color: var(--L-1, hsl(204, 88%, 53%)) !important;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -114,12 +127,13 @@ button {
   color: white;
 }
 .button {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .account {
+  position: relative;
+  left: 15%;
   display: flex;
-  padding: 20px;
-  margin-left: 100px;
+  margin: 0px !important;
 }
 .ink {
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
@@ -132,19 +146,7 @@ button {
   font-style: normal;
   font-weight: 400;
 }
-.secondbox {
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-  top: 20%;
-  left: 20%;
-  background-color: #152259;
-  border-radius: 10px;
-  width: 400px;
-  height: 400px;
-}
+
 .text2 {
   width: 100%;
   color: var(--L-7, #e3f3fd);
@@ -155,18 +157,34 @@ button {
   font-weight: 500;
   line-height: normal;
 }
-.logo{
+.logo {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1230px) {
+  form {
+    width: 60%;
+  }
+  .login input {
+    width: 400px;
+  }
+  .button {
+    width: 400px ;
+  }
+}
 @media (max-width: 770px) {
-  body {
-    overflow-x: hidden;
-    background-color: white;
+  form {
+    width: 70%;
+  }
+  .login input {
+    width: 400px;
+  }
+  .button {
+    width: 300px;
   }
 
   .first-con {
-    margin-left: 12px;
+    /* margin-left: 12px; */
     padding: 0px;
   }
   .login input {
@@ -178,24 +196,24 @@ button {
   .account {
     display: flex;
     position: relative;
-    left: -80px;
+    left: -1%;
     top: 10px;
     padding: 0px;
   }
-  .secondbox{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    position: relative;
-    top: 20%;
-    left: 10%;
-    background-color: #152259;
-    border-radius: 10px;
-    width: 400px;
-    height: 400px;
+  .second-con{
+    width: 60%;
   }
 }
 @media (max-width: 430px) {
+  form {
+    overflow-x: hidden;
+    margin-top: -5px;
+    width: 100%;
+  }
+  .first-con {
+    position: relative;
+    left: 40%;
+  }
   body {
     height: 100vh;
     background-color: white;
@@ -224,12 +242,12 @@ button {
   }
   .forgot-password {
     position: relative;
-    left: 32%;
+    right: 14%;
     font-size: 13px;
   }
   .account {
     position: relative;
-    left: 29%;
+    left: 1%;
     margin: 0px;
     padding: 0px;
   }
@@ -282,12 +300,12 @@ button {
   }
   .forgot-password {
     position: relative;
-    left: 39%;
+    right: 11%;
     font-size: 13px;
   }
   .account {
     position: relative;
-    left: 29%;
+    left: 1%;
     margin: 0px;
     padding: 0px;
   }
@@ -316,6 +334,12 @@ button {
     height: 100vh;
     background-color: white;
   }
+
+  .first-con {
+    position: relative;
+    left: 45%;
+    margin-top: 30px;
+  }
   .second-con {
     display: none;
   }
@@ -331,7 +355,7 @@ button {
     font-size: 18px;
   }
   .first-con p {
-    width: 290px!important;
+    width: 290px !important;
     font-size: 12px;
   }
   label {
@@ -342,12 +366,12 @@ button {
   }
   .forgot-password {
     position: relative;
-    left: 49%;
+    right:9%;
     font-size: 12px;
   }
   .account {
     position: relative;
-    left: 29%;
+    left: 6%;
     margin: 0px;
     padding: 0px;
   }
@@ -357,7 +381,7 @@ button {
   }
 
   .account p {
-    font-size: 8px;
+    font-size: 13px;
     padding: 0px;
     width: 100%;
   }
