@@ -7,13 +7,12 @@
 .container{
   width: 100%;
   height: 100vh;
-  background-color: #152259;
+  background-color: #6793fb;
   color: white;
 }
 .loader {
   position: relative;
   top: 27%;
-  /* margin-top: 210px; */
   display: flex;
   flex-direction: column;
   justify-content: center;

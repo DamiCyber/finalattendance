@@ -5,12 +5,13 @@
   font-family: "Poppins", sans-serif;
 }
 .err {
+  height: 20px;
   color: red;
   font-size: 12px;
 }
 form {
   z-index: 11111;
-  margin-top: 3px;
+  margin-top: -45px;
   width: 50%;
 }
 .whole-con {
@@ -22,8 +23,6 @@ form {
   height: 100vh !important;
 }
 .first-con {
-  position: relative;
-  left: 7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +65,7 @@ form {
   color: white;
 }
 .login {
-  gap: 8px;
+  gap: 6px;
   color: var(--D-1, #122539);
   display: flex;
   flex-direction: column;
@@ -90,7 +89,7 @@ form {
 }
 .remember {
   gap: 15px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .remember label {
@@ -103,7 +102,9 @@ form {
 }
 .forgot-password {
   position: relative;
-  right:15%;
+ 
+  right:20%;
+  
   text-decoration: none;
   text-align: right;
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
@@ -115,6 +116,7 @@ form {
 }
 button {
   width: 500px;
+ 
   display: flex;
   padding: 9.5px 12px;
   justify-content: center;
@@ -127,16 +129,23 @@ button {
   color: white;
 }
 .button {
-  padding-top: 20px;
+  position: relative;
+  top:1%;
+  padding-top: 30px;
 }
 .account {
   position: relative;
   left: 15%;
+  top:2%;
   display: flex;
   margin: 0px !important;
 }
 .ink {
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
+}
+.account p{
+  color: var(--L-1, hsl(204, 88%, 53%));
+
 }
 .account a {
   text-decoration: none;
@@ -146,8 +155,10 @@ button {
   font-style: normal;
   font-weight: 400;
 }
-
-.text2 {
+.text2{
+  position: relative;
+  top: 85%;
+  text-align: center;
   width: 100%;
   color: var(--L-7, #e3f3fd);
   text-align: center;
@@ -182,7 +193,11 @@ button {
   .button {
     width: 300px;
   }
-
+  .forgot-password {
+    position: relative;
+   
+    right:14%
+    ;}
   .first-con {
     /* margin-left: 12px; */
     padding: 0px;
@@ -242,7 +257,7 @@ button {
   }
   .forgot-password {
     position: relative;
-    right: 14%;
+    right: 3%;
     font-size: 13px;
   }
   .account {
@@ -276,9 +291,7 @@ button {
     height: 100vh;
     background-color: white;
   }
-  form{
-    margin-top: -90px;
-  }
+ 
   .second-con {
     display: none;
   }
@@ -303,7 +316,7 @@ button {
   }
   .forgot-password {
     position: relative;
-    right: 11%;
+    right: -6%;
     font-size: 13px;
   }
   .account {
@@ -337,9 +350,7 @@ button {
     height: 100vh;
     background-color: white;
   }
-  form{
-    margin-top: -90px;
-  }
+
   .first-con {
     position: relative;
     left: 45%;
@@ -371,7 +382,7 @@ button {
   }
   .forgot-password {
     position: relative;
-    right:9%;
+    right:-9%;
     font-size: 12px;
   }
   .account {
