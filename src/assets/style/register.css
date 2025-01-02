@@ -49,7 +49,7 @@ form {
   width: 100%;
 }
 .first-text p {
-  width: 79%;
+  width: 100%;
   line-height: 30px;
 }
 .first-cont p {
@@ -216,6 +216,14 @@ button {
   font-weight: 600;
   line-height: normal;
 }
+.google-button img {
+  position: absolute;
+  left: 135px;
+  margin-top: 12px;
+}
+.google-button button{
+  border: none;
+}
 .logo h3 {
   color: #fff;
   font-family: Poppins;
@@ -286,12 +294,15 @@ button {
   .option {
     margin-left: 140px;
   }
+  .google-button img {
+    position: absolute;
+    left: 130px;
+    margin-top: 13px;
+  }
 }
 @media (max-width: 770px) {
   form {
     position: relative;
-    /* overflow-x: hidden; */
-    /* top: 2%; */
     left: 2%;
     width: 70%;
   }
@@ -321,6 +332,11 @@ button {
   .google-button {
     font-size: 12px;
     width: 380px;
+  }
+  .google-button img {
+    position: absolute;
+    left: 100px;
+    margin-top: 9px;
   }
   .first-text p {
     display: none;
@@ -357,6 +373,11 @@ button {
     position: relative;
     left: 1%;
     width: 90%;
+  }
+  .google-button img {
+    position: absolute;
+    left: 110px;
+    margin-top: 9px;
   }
   .register-first input {
     width: 170px;
@@ -448,6 +469,87 @@ button {
   .google-button {
     font-size: 11px;
     width: 283px;
+  }
+  .google-button img {
+    position: absolute;
+    left: 60px;
+    margin-top: 9px;
+  }
+  .Reg-account{
+    margin-left: 30px;
+    width: 100%;
+  }
+  .Reg-account p {
+    font-weight: 600;
+    width: 100%;
+    font-size: 11px;
+  }
+  .Reg-account a{
+    position: absolute;
+    left: 106%;
+    font-weight: 600;
+    width: 80%;
+    font-size: 11px;
+  }
+  .leftu{
+    position: relative;
+    left: 8%;
+  }
+}
+@media (max-width: 330px) {
+
+  .first-text h2 {
+    font-size: 17px;
+    margin-top: 80px;
+  }
+  .first-text p {
+    display: none;
+  }
+  .second-cont{
+    display: none;
+  }
+  .form {
+    overflow-x: hidden;
+    position: relative;
+    top:-10%;
+    left: 2%;
+    width: 90%;
+  }
+
+  .register-first input::placeholder {
+    font-size: 11px;
+  }
+  .register-second input::placeholder {
+    font-size: 11px;
+  }
+  .password-first input::placeholder {
+    font-size: 11px;
+  }
+  .register-first input {
+    width: 138px;
+  }
+  .password-first input {
+    width: 138px;
+  }
+  .register-second input {
+      width: 283px;
+  }
+  button {
+    font-size: 11px;
+    width: 283px;
+  }
+  .option {
+    margin-left: 107px;
+    font-size: 7px;
+  }
+  .google-button {
+    font-size: 11px;
+    width: 283px;
+  }
+  .google-button img {
+    position: absolute;
+    left: 60px;
+    margin-top: 9px;
   }
   .Reg-account{
     margin-left: 30px;

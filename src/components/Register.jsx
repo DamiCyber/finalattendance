@@ -9,7 +9,7 @@ const Register = () => {
           <div className="first-cont">
             <div className="first-text">
               <h2>Register</h2>
-              <p>Welcome to the Attendipen! Please fill in
+              <p>Welcome to the Attendipen! Please fill in <br />
                 the required information to create your account.</p>
             </div>
             <div className="register-flex">
@@ -44,7 +44,7 @@ const Register = () => {
                 <h1>or</h1>
               </div>
               <div className="google-button">
-                <img src="" alt="" />
+                <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513636/google_do1gt6.svg" alt="" />
                 <button className='google-button' >continue with Google</button>
               </div>
               <div className="Reg-account">
