@@ -56,11 +56,15 @@ form {
   padding-bottom: 20px;
 }
 .second-con {
-  background-image:linear-gradient( rgba(90, 145, 203, 0.5), rgba(90, 145, 203, 0.5)), url("https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513605/unsplash_iQPr1XkF5F0_cbamt8.png");
+  background-image: linear-gradient(
+      rgba(90, 145, 203, 0.5),
+      rgba(90, 145, 203, 0.5)
+    ),
+    url("https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513605/unsplash_iQPr1XkF5F0_cbamt8.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; 
+  height: 100vh;
   width: 700px;
   color: white;
 }
@@ -102,9 +106,9 @@ form {
 }
 .forgot-password {
   position: relative;
- 
-  right:20%;
-  
+
+  right: 20%;
+
   text-decoration: none;
   text-align: right;
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
@@ -116,7 +120,7 @@ form {
 }
 button {
   width: 500px;
- 
+
   display: flex;
   padding: 9.5px 12px;
   justify-content: center;
@@ -130,22 +134,21 @@ button {
 }
 .button {
   position: relative;
-  top:1%;
+  top: 1%;
   padding-top: 30px;
 }
 .account {
   position: relative;
   left: 15%;
-  top:2%;
+  top: 2%;
   display: flex;
   margin: 0px !important;
 }
 .ink {
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
 }
-.account p{
+.account p {
   color: var(--L-1, hsl(204, 88%, 53%));
-
 }
 .account a {
   text-decoration: none;
@@ -155,7 +158,7 @@ button {
   font-style: normal;
   font-weight: 400;
 }
-.text2{
+.text2 {
   position: relative;
   top: 85%;
   text-align: center;
@@ -180,7 +183,7 @@ button {
     width: 400px;
   }
   .button {
-    width: 400px ;
+    width: 400px;
   }
 }
 @media (max-width: 770px) {
@@ -195,11 +198,10 @@ button {
   }
   .forgot-password {
     position: relative;
-   
-    right:14%
-    ;}
+
+    right: 14%;
+  }
   .first-con {
-    /* margin-left: 12px; */
     padding: 0px;
   }
   .login input {
@@ -215,13 +217,12 @@ button {
     top: 10px;
     padding: 0px;
   }
-  .second-con{
+  .second-con {
     width: 60%;
   }
 }
 @media (max-width: 430px) {
   form {
-    /* overflow-x: hidden; */
     margin-top: -45px;
     width: 100%;
   }
@@ -257,7 +258,7 @@ button {
   }
   .forgot-password {
     position: relative;
-    right: 3%;
+    right: 45px;
     font-size: 13px;
   }
   .account {
@@ -291,7 +292,7 @@ button {
     height: 100vh;
     background-color: white;
   }
- 
+
   .second-con {
     display: none;
   }
@@ -316,12 +317,12 @@ button {
   }
   .forgot-password {
     position: relative;
-    right: -6%;
+    right: 6%;
     font-size: 13px;
   }
   .account {
     position: relative;
-    left: 1%;
+    left: 6%;
     margin: 0px;
     padding: 0px;
   }
@@ -382,27 +383,33 @@ button {
   }
   .forgot-password {
     position: relative;
-    right:-9%;
+    right: 6%;
+    font-weight: 600;
     font-size: 12px;
   }
   .account {
     position: relative;
-    left: 6%;
+    font-weight: 600;
+    left: 2%;
     margin: 0px;
     padding: 0px;
   }
-  .ink {
-    font-size: 11px;
-    width: 100%;
-  }
 
   .account p {
-    font-size: 13px;
+    font-weight: 600;
+    font-size: 12px;
     padding: 0px;
     width: 100%;
   }
+  .account a {
+    position: relative;
+    left: -9%;
+    width: 50%;
+    font-weight: 600 !important;
+  }
   .ink {
-    font-size: 13px !important;
+    width: 100%;
+    font-size: 12px !important;
   }
 
   .login input {

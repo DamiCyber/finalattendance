@@ -288,28 +288,16 @@ button {
   }
 }
 @media (max-width: 770px) {
-  .first-text p {
-    width: 100%;
-  }
-  .second-cont {
-    display: none;
-  }
-}
-@media (max-width: 430px) {
-  .first-text h2 {
-    font-size: 17px;
-    margin-top: 80p;
-  }
-  .first-text p {
-    /* width: 100% !important; */
-    font-size: 12px;
-    line-height: 20px;
-  }
   form {
-    overflow-x: hidden;
     position: relative;
-    left: 1%;
-    width: 90%;
+    /* overflow-x: hidden; */
+    /* top: 2%; */
+    left: 2%;
+    width: 70%;
+  }
+  .first-text h2 {
+    font-size: 27px;
+    padding-bottom: 20px;
   }
   .register-first input {
     width: 170px;
@@ -330,18 +318,155 @@ button {
     font-size: 12px;
     width: 380px;
   }
-  .option{
-    font-size: 8px;
-  }
   .google-button {
     font-size: 12px;
     width: 380px;
   }
-  .Reg-account p{
+  .first-text p {
+    display: none;
+    width: 100%;
+  }
+  .Reg-account p {
+    font-weight: 600;
+    width: 100%;
     font-size: 12px;
   }
-  .Reg-account{
-
+  .Reg-account a{
+    font-weight: 600;
+    width: 50%;
     font-size: 12px;
+  }
+}
+@media (max-width: 430px) {
+.form{
+    position: relative;
+    top:-10%;
+  }
+  .first-text h2 {
+    font-size: 17px;
+    margin-top: 80px;
+  }
+  .first-text p {
+    display: none;
+  }
+  .second-cont{
+    display: none;
+  }
+  form {
+    overflow-x: hidden;
+    position: relative;
+    left: 1%;
+    width: 90%;
+  }
+  .register-first input {
+    width: 170px;
+  }
+  .register-first input::placeholder {
+    font-size: 11px;
+  }
+  .register-second input::placeholder {
+    font-size: 11px;
+  }
+  .password-first input::placeholder {
+    font-size: 11px;
+  }
+  .password-first input {
+    width: 170px;
+  }
+  .register-second input {
+    width: 380px;
+  }
+  button {
+    font-size: 11px;
+    width: 380px;
+  }
+  .option {
+    font-size: 8px;
+  }
+  .google-button {
+    font-size: 11px;
+    width: 380px;
+  }
+  
+  .Reg-account p {
+    font-weight: 600;
+    width: 100%;
+    font-size: 10px;
+  }
+  .Reg-account a{
+    font-weight: 600;
+    width: 50%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 380px) {
+
+  .first-text h2 {
+    font-size: 17px;
+    margin-top: 80px;
+  }
+  .first-text p {
+    display: none;
+  }
+  .second-cont{
+    display: none;
+  }
+  .form {
+    overflow-x: hidden;
+    position: relative;
+    top:-10%;
+    left: 1%;
+    width: 90%;
+  }
+
+  .register-first input::placeholder {
+    font-size: 11px;
+  }
+  .register-second input::placeholder {
+    font-size: 11px;
+  }
+  .password-first input::placeholder {
+    font-size: 11px;
+  }
+  .register-first input {
+    width: 138px;
+  }
+  .password-first input {
+    width: 138px;
+  }
+  .register-second input {
+      width: 283px;
+  }
+  button {
+    font-size: 11px;
+    width: 283px;
+  }
+  .option {
+    margin-left: 107px;
+    font-size: 7px;
+  }
+  .google-button {
+    font-size: 11px;
+    width: 283px;
+  }
+  .Reg-account{
+    margin-left: 30px;
+    width: 100%;
+  }
+  .Reg-account p {
+    font-weight: 600;
+    width: 100%;
+    font-size: 11px;
+  }
+  .Reg-account a{
+    position: absolute;
+    left: 106%;
+    font-weight: 600;
+    width: 80%;
+    font-size: 11px;
+  }
+  .leftu{
+    position: relative;
+    left: 8%;
   }
 }
