@@ -5,7 +5,7 @@ import { useFormik } from 'formik'
 import * as yup from "yup"
 const Login = () => {
   const validationSchema = yup.object({
-    username: yup.string().required("Required").max(26).min(3),
+    username: yup.string().required("Required").max().min(3),
     password: yup.string().matches(/^[a-zA-z0-9]{8}$/, "Enter a password with letter and number ").required("Required").max(8).min(8),
   })
   let naviagte = useNavigate()
