@@ -36,16 +36,16 @@ const Register = () => {
                 <input type="password" placeholder='Confirm Password' />
               </div>
             </div>
-            <div className="buttons">
-              <div className="button">
-                <button >Register</button>
+            <div className="button-Reg">
+              <div className="button-Reg">
+                <button className='Reg-btn' >Register</button>
               </div>
               <div className="option">
                 <h1>or</h1>
               </div>
-              <div className="google-button">
+              <div className="google">
                 <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513636/google_do1gt6.svg" alt="" />
-                <button className='google-button' >continue with Google</button>
+                <button className='google-btn' >continue with Google</button>
               </div>
               <div className="Reg-account">
                 <p>Already have account? </p>

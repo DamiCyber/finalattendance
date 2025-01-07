@@ -118,28 +118,29 @@ form {
   font-weight: 400;
   line-height: normal;
 }
-button {
-  width: 500px;
+.button-container {
+  position: relative;
+  top: 1%;
+  padding-top: 5px;
+}
 
+.login-btn {
+  width: 500px;
+  height: 40px;
   display: flex;
-  padding: 9.5px 12px;
+  padding: 6px;
   justify-content: center;
   align-items: center;
-  align-self: stretch;
   border-radius: 6px;
-  background: var(--L-1, #1d9bf0);
   border: none;
   cursor: pointer;
   color: white;
+  background-color: #1d9bf0; /* Adjust the color as needed */
 }
-.button {
-  position: relative;
-  top: 1%;
-  padding-top: 30px;
-}
+
 .account {
   position: relative;
-  left: 15%;
+  left: 13%;
   top: 2%;
   display: flex;
   margin: 0px !important;
@@ -182,7 +183,7 @@ button {
   .login input {
     width: 400px;
   }
-  .button {
+  .login-btn {
     width: 400px;
   }
 }
@@ -193,7 +194,7 @@ button {
   .login input {
     width: 400px;
   }
-  .button {
+  .login-btn {
     width: 300px;
   }
   .forgot-password {
@@ -207,7 +208,7 @@ button {
   .login input {
     width: 300px;
   }
-  button {
+  .login-btn {
     width: 300px;
   }
   .account {
@@ -283,8 +284,8 @@ button {
   .login input {
     width: 300px;
   }
-  button {
-    width: 300px;
+  .login-btn {
+    width: 300px ;
   }
 }
 @media (max-width: 380px) {
@@ -342,9 +343,10 @@ button {
   .login input {
     width: 300px;
   }
-  .button {
+  .login-btn{
+   
     width: 300px;
-  }
+  } 
 }
 @media (max-width: 325px) {
   body {
@@ -415,7 +417,8 @@ button {
   .login input {
     width: 270px;
   }
-  .button {
-    width: 270px;
+  .login-btn{
+    height: 35px;
+    width: 270px ;
   }
 }

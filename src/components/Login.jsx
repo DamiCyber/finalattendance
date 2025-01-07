@@ -5,7 +5,7 @@ import { useFormik } from 'formik'
 import * as yup from "yup"
 const Login = () => {
   const validationSchema = yup.object({
-    username: yup.string().required("Required").max().min(3),
+    username: yup.string().required("Required").max40).min(3),
     password: yup.string().matches(/^[a-zA-z0-9]{8}$/, "Enter a password with letter and number ").required("Required").max(8).min(8),
   })
   let naviagte = useNavigate()
@@ -14,7 +14,7 @@ const Login = () => {
       username: "",
       password: "",
     },
-    validationSchema: validationSchema, 
+    validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log(values);
       setTimeout(() => {
@@ -25,14 +25,14 @@ const Login = () => {
       //   text: "Log In sucessful!",
       //   icon: "success"
       // });
-   
+
 
     }
-   })
+  })
   return (
     <div>
       <div className="whole-con">
-        <form  onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="first-con">
             <div className="text">
               <h2>Login</h2>
@@ -41,7 +41,7 @@ const Login = () => {
             </div>
             <div className="login">
               <label htmlFor="email">Email ID</label>
-               <div className='err'>{errors.username}</div>
+              <div className='err'>{errors.username}</div>
               <input type="email" placeholder='Enter Email ID' onChange={handleChange} name="username" value={values.username} id="username" />
               <label htmlFor="password">Password</label>
               <div className='err'>{errors.password}</div>
@@ -54,8 +54,10 @@ const Login = () => {
             <div className="forgot-password">
               <Link to="#" className='forgot-password'>Forgot Password?</Link>
             </div>
-            <div className="button">
-              <button className='button' type='submit' >LOGIN</button>
+            <div className="button-container">
+              <div className="button-container">
+                <button type="submit" className="login-btn"> LOGIN</button>
+              </div>
             </div>
             <div className="account">
               <p>Don't you have account?</p>
@@ -64,9 +66,9 @@ const Login = () => {
           </div>
         </form>
         <div className="second-con">
-            <div className="text2">
-              <p>"Attendance is the first step to <br /> success, be present to win."</p>
-            </div>
+          <div className="text2">
+            <p>"Attendance is the first step to <br /> success, be present to win."</p>
+          </div>
         </div>
       </div>
 

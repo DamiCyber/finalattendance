@@ -12,7 +12,7 @@ const Loader = () => {
     })
     if (loading) {
         return (
-            <div>
+            <div className='body'>
                 <div className="container">
                     <div className="loader">
                         <div className="logo">
