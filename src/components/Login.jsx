@@ -1,14 +1,17 @@
-import React from 'react'
-import "../assets/style/login.css"
-import { Link, useNavigate } from 'react-router-dom'
-import { useFormik } from 'formik'
-import * as yup from "yup"
+import React from 'react';
+import "../assets/style/login.css";
+import { Link, useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
+import * as yup from "yup";
+
 const Login = () => {
   const validationSchema = yup.object({
-    username: yup.string().required("Required").max40).min(3),
-    password: yup.string().matches(/^[a-zA-z0-9]{8}$/, "Enter a password with letter and number ").required("Required").max(8).min(8),
-  })
-  let naviagte = useNavigate()
+    username: yup.string().required("Required").max(40).min(3),
+    password: yup.string().matches(/^[a-zA-Z0-9]{8}$/, "Enter a password with letter and number").required("Required").max(8).min(8),
+  });
+
+  let navigate = useNavigate(); // Fixed typo here ('naviagte' to 'navigate')
+
   const { handleChange, handleSubmit, values, errors } = useFormik({
     initialValues: {
       username: "",
@@ -18,17 +21,11 @@ const Login = () => {
     onSubmit: (values) => {
       console.log(values);
       setTimeout(() => {
-        naviagte("/Dashboard")
+        navigate("/Dashboard");
       }, 1000);
-      // Swal.fire({
-      //   title: "Attendipen",
-      //   text: "Log In sucessful!",
-      //   icon: "success"
-      // });
-
-
     }
-  })
+  });
+
   return (
     <div>
       <div className="whole-con">
@@ -40,7 +37,7 @@ const Login = () => {
               <p>Please enter your Attendance credentials.</p>
             </div>
             <div className="login">
-              <label htmlFor="email">Email ID</label>
+              <label htmlFor="username">Email ID</label>
               <div className='err'>{errors.username}</div>
               <input type="email" placeholder='Enter Email ID' onChange={handleChange} name="username" value={values.username} id="username" />
               <label htmlFor="password">Password</label>
@@ -55,13 +52,11 @@ const Login = () => {
               <Link to="#" className='forgot-password'>Forgot Password?</Link>
             </div>
             <div className="button-container">
-              <div className="button-container">
-                <button type="submit" className="login-btn"> LOGIN</button>
-              </div>
+              <button type="submit" className="login-btn">LOGIN</button>
             </div>
             <div className="account">
-              <p>Don't you have account?</p>
-              <Link to="/Register" className='ink'> Register here</Link>
+              <p>Don't have an account?</p>
+              <Link to="/Register" className='ink'>Register here</Link>
             </div>
           </div>
         </form>
@@ -71,9 +66,8 @@ const Login = () => {
           </div>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
