@@ -240,6 +240,7 @@ form {
   padding: 3px !important;
 }
 .inka {
+  
   text-decoration: none;
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
 }

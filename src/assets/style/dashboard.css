@@ -36,20 +36,24 @@
   line-height: normal;
 }
 
-
-.form button {
+nav{
+  display: flex;
+/* justify-content: space-between; */
+align-items: center;
+}
+.search button {
   border: none;
   background: none;
   color: #8b8ba7;
 }
 
-.form {
+.search {
   --timing: 0.3s;
   --width-of-input: 200px;
   --height-of-input: 40px;
   --border-height: 2px;
   --input-bg: #fff;
-  --border-color: #2f2ee9;
+  --border-color: #303972;
   --border-radius: 30px;
   --after-border-radius: 1px;
   position: relative;
@@ -73,7 +77,7 @@
   border: none;
 }
 
-.form:before {
+.search:before {
   content: "";
   position: absolute;
   background: var(--border-color);
@@ -86,34 +90,33 @@
   border-radius: 1px;
   transition: transform var(--timing) ease;
 }
-/* Hover on Input */
-.form:focus-within {
+
+.search:focus-within {
   border-radius: var(--after-border-radius);
 }
 
 input:focus {
   outline: none;
 }
-/* here is code of animated border */
-.form:focus-within:before {
+
+.search:focus-within:before {
   transform: scale(1);
 }
-/* styling of close button */
-/* == you can click the close button to remove text == */
+
 .reset {
   border: none;
   background: none;
   opacity: 0;
   visibility: hidden;
 }
-/* close button shown when typing */
+
 input:not(:placeholder-shown) ~ .reset {
   opacity: 1;
   visibility: visible;
 }
-/* sizing svg icons */
-.form svg {
+
+.search svg {
   width: 17px;
-  color: ;
+  color:#303972 ;
   margin-top: 3px;
 }

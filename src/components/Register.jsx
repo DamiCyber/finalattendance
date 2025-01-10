@@ -23,7 +23,7 @@ const Register = () => {
               </div>
             </div>
             <div className="register-second">
-              <label htmlFor="email">Onpassive Email ID</label>
+              <label htmlFor="email"> Email</label>
               <input type="email" placeholder='Enter Email ID' />
             </div>
             <div className="password-flex">
