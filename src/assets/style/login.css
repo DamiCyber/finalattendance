@@ -148,7 +148,7 @@ form {
 .ink {
     position: relative;
   /* left: 13%; */
-  top: -8%;
+  /* top: -8%; */
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
 }
 .account p {
