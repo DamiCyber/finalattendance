@@ -60,7 +60,7 @@ form {
       rgba(90, 145, 203, 0.5),
       rgba(90, 145, 203, 0.5)
     ),
-    url("https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513605/unsplash_iQPr1XkF5F0_cbamt8.png");
+    url("https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513635/unsplash_iQPr1XkF5F0_gbb4bi.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,8 +147,6 @@ form {
 }
 .ink {
     position: relative;
-  /* left: 13%; */
-  /* top: -8%; */
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
 }
 .account p {

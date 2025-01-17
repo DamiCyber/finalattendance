@@ -466,11 +466,11 @@ form {
     width: 283px;
   }
   .option {
-    margin-left: 107px;
-    font-size: 7px;
+    margin-left: 80px;
+    font-size: 11px;
   }
   .google {
-    font-size: 11px;
+    font-size: 12px;
     width: 283px;
   }
   .google-btn img {
@@ -489,7 +489,7 @@ form {
   }
   .Reg-account a{
     position: absolute;
-    left: 106%;
+    left: 95%;
     font-weight: 600;
     width: 80%;
     font-size: 11px;
@@ -543,7 +543,7 @@ form {
   }
   .option {
     margin-left: 107px;
-    font-size: 7px;
+    font-size: 11px;
   }
   .google {
     font-size: 11px;
