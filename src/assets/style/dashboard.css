@@ -53,6 +53,9 @@ nav {
 }
 
 .search {
+  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
   --timing: 0.3s;
   --width-of-input: 250px;
   --height-of-input: 40px;
@@ -128,6 +131,7 @@ input:not(:placeholder-shown) ~ .reset {
 .controls {
   display: flex;
   align-items: center;
+  
   gap: 20px;
 }
 .notify {
@@ -167,6 +171,9 @@ input:not(:placeholder-shown) ~ .reset {
   line-height: normal;
 }
 .user-pics {
+  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
   width: 50px;
   height: 50px;
   border-radius: 40px;
