@@ -227,7 +227,7 @@ input:not(:placeholder-shown) ~ .reset {
 }
 .counter p {
   color: var(--Color-Gray-3, #a098ae);
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
