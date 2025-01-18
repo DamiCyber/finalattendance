@@ -74,7 +74,36 @@ const Dashboard = () => {
           </div>
         </nav>
         <div className="counter">
-          
+        <div className="count">
+        <div className="count1">
+            <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281721/Student_hunumx.svg" />
+            <div className="text">
+            <p>Students</p>
+            <h2>932k</h2>
+            </div>
+          </div>
+          <div className="count2">
+            <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281721/Student_hunumx.svg" alt="" />
+            <div className="text">
+            <p>Teachers</p>
+            <h2>754k</h2>
+            </div>
+          </div>
+          <div className="count3">
+            <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281723/Calendar_y5hl1n.svg" alt="" />
+            <div className="text">
+            <p>Events</p>
+            <h2>40K</h2>
+            </div>
+          </div>
+          <div className="count4">
+            <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281721/food_cp4exu.svg" alt="" />
+            <div className="text">
+            <p>Foods</p>
+            <h2>32k</h2>
+            </div>
+          </div>
+        </div>
         </div>
         <div className="tables">
           <div className="calendar-container">

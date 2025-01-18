@@ -24,7 +24,8 @@
 .tables {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 45px;
+  justify-content: space-between;
   width: 100%;
   padding-top: 50px;
 }
@@ -71,7 +72,7 @@ nav {
   background: var(--input-bg, #fff);
 }
 
-.search input{
+.search input {
   font-size: 0.9rem;
   background-color: transparent;
   width: 100%;
@@ -84,7 +85,7 @@ nav {
 .search:before {
   content: "";
   position: absolute;
-  background:#4D44B5;
+  background: #4d44b5;
   transform: scaleX(0);
   transform-origin: center;
   width: 100%;
@@ -127,7 +128,7 @@ input:not(:placeholder-shown) ~ .reset {
 .controls {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 .notify {
   padding: 10px;
@@ -171,8 +172,13 @@ input:not(:placeholder-shown) ~ .reset {
   border-radius: 40px;
   background: var(--Color-Gray-2, #c1bbeb);
 }
-
+.counter img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
 .counter {
+  /* box-shadow: #152259; */
   width: 1115px;
   position: relative;
   top: 5%;
@@ -181,4 +187,76 @@ input:not(:placeholder-shown) ~ .reset {
   flex-shrink: 0;
   border-radius: 20px;
   background: var(--Color-White, #fff);
+}
+.count {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  margin-right: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.count1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.count2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.count3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.count4 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.counter h2 {
+  color: var(--Color-Text, #303972);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.counter p {
+  color: var(--Color-Gray-3, #a098ae);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.count1 {
+  width: 50px;
+  height: 50px;
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #4d44b5;
+}
+.count2 {
+  width: 50px;
+  height: 50px;
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #fb7d5b;
+}
+.count3 {
+  width: 50px;
+  height: 50px;
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #fcc43e;
+}
+.count4 {
+  width: 50px;
+  height: 50px;
+  padding: 9px;
+  border-radius: 50%;
+  background-color: #303972;
 }
