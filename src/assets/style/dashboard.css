@@ -178,7 +178,9 @@ input:not(:placeholder-shown) ~ .reset {
   flex-shrink: 0;
 }
 .counter {
-  /* box-shadow: #152259; */
+  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
   width: 1115px;
   position: relative;
   top: 5%;
