@@ -29,6 +29,9 @@
   width: 100%;
   padding-top: 50px;
 }
+.calendar-container{
+  margin-top: -90px;
+}
 .dash {
   color: var(--Color-Text, #303972);
   font-family: Poppins;
@@ -53,9 +56,6 @@ nav {
 }
 
 .search {
-  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
   --timing: 0.3s;
   --width-of-input: 250px;
   --height-of-input: 40px;
@@ -131,7 +131,7 @@ input:not(:placeholder-shown) ~ .reset {
 .controls {
   display: flex;
   align-items: center;
-  
+
   gap: 20px;
 }
 .notify {
@@ -173,9 +173,6 @@ input:not(:placeholder-shown) ~ .reset {
   line-height: normal;
 }
 .user-pics {
-  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   width: 50px;
   height: 50px;
   border-radius: 40px;
@@ -187,9 +184,6 @@ input:not(:placeholder-shown) ~ .reset {
   flex-shrink: 0;
 }
 .counter {
-  box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
   width: 1115px;
   position: relative;
   top: 5%;
@@ -270,4 +264,56 @@ input:not(:placeholder-shown) ~ .reset {
   padding: 9px;
   border-radius: 50%;
   background-color: #303972;
+}
+.side-logo {
+  position: relative;
+  top: 6%;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 94px;
+  height: 80px;
+}
+.side-logo h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 23px;
+  color: #ffffff;
+}
+.border{
+  margin-top: 100px;
+  border-bottom: 1px solid #bdbdbd5e;
+}
+
+.board{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: -21px;
+  padding-bottom: 14px;
+  transition: background-color 0.3s ease;
+}
+.board .link{
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+ .linka{
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.board.active {
+  background-color: #3498db; /* Change to your preferred active color */
+  border-radius: 8px;
 }

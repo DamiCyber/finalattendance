@@ -288,6 +288,9 @@ form {
   .login-btn {
     width: 300px ;
   }
+  .login{
+    gap: 2px;
+  }
 }
 @media (max-width: 380px) {
   body {
@@ -348,6 +351,9 @@ form {
    
     width: 300px;
   } 
+  .login{
+    gap: 2px;
+  }
 }
 @media (max-width: 325px) {
   body {
@@ -414,7 +420,9 @@ form {
     width: 100%;
     font-size: 12px !important;
   }
-
+.login{
+  gap: 2px;
+}
   .login input {
     width: 270px;
   }
