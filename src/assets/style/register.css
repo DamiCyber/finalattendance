@@ -173,7 +173,7 @@ form {
 }
 .leftu {
   position: relative;
-  left: 13%;
+  left: 0%;
 }
 .Reg-btn {
   width: 500px;
@@ -188,7 +188,7 @@ form {
   cursor: pointer;
   color: white;
 }
-.Reg-btn  {
+.Reg-btn {
   padding-top: 6px;
 }
 .option {
@@ -218,12 +218,12 @@ form {
   font-weight: 600;
   line-height: normal;
 }
-/* .google-btn img {
-  position: absolute;
-  left: 135px;
-  margin-top: 12px;
-} */
-.google-btn button{
+.register-second {
+  padding-bottom: 12px;
+  border: none;
+  outline: none;
+}
+.google-btn button {
   border: none;
 }
 .logo h3 {
@@ -240,7 +240,6 @@ form {
   padding: 3px !important;
 }
 .inka {
-  
   text-decoration: none;
   color: var(--L-1, hsl(204, 88%, 53%)) !important;
 }
@@ -332,7 +331,7 @@ form {
     font-size: 12px;
     width: 380px;
   }
-  .google{
+  .google {
     font-size: 12px;
     width: 380px;
   }
@@ -350,25 +349,28 @@ form {
     width: 100%;
     font-size: 12px;
   }
-  .Reg-account a{
+  .Reg-account a {
     font-weight: 600;
     width: 50%;
     font-size: 12px;
   }
 }
 @media (max-width: 430px) {
-.form{
+  .form {
     position: relative;
-    top:-10%;
+    top: -10%;
+  }
+  .register-second{
+    width: 374px;
   }
   .first-text h2 {
     font-size: 17px;
-    margin-top: 80px;
+    margin-top: 140px;
   }
   .first-text p {
     display: none;
   }
-  .second-cont{
+  .second-cont {
     display: none;
   }
   form {
@@ -411,34 +413,36 @@ form {
     font-size: 11px;
     width: 380px;
   }
-  
+
   .Reg-account p {
     font-weight: 600;
     width: 100%;
     font-size: 10px;
   }
-  .Reg-account a{
+  .Reg-account a {
     font-weight: 600;
     width: 50%;
     font-size: 11px;
   }
 }
 @media (max-width: 380px) {
-
+  .whole-cont{
+    z-index: 11111;
+  }
   .first-text h2 {
     font-size: 17px;
-    margin-top: 80px;
+    margin-top: 140px;
   }
   .first-text p {
     display: none;
   }
-  .second-cont{
+  .second-cont {
     display: none;
   }
   .form {
     overflow-x: hidden;
     position: relative;
-    top:-10%;
+    top: -10%;
     left: 5%;
     width: 90%;
   }
@@ -459,7 +463,7 @@ form {
     width: 138px;
   }
   .register-second input {
-      width: 283px;
+    width: 283px;
   }
   .Reg-btn {
     font-size: 11px;
@@ -478,7 +482,7 @@ form {
     left: 60px;
     margin-top: 9px;
   }
-  .Reg-account{
+  .Reg-account {
     margin-left: 30px;
     width: 100%;
   }
@@ -487,34 +491,33 @@ form {
     width: 100%;
     font-size: 11px;
   }
-  .Reg-account a{
+  .Reg-account a {
     position: absolute;
-    left: 95%;
+    left: 110%;
     font-weight: 600;
     width: 80%;
     font-size: 11px;
   }
-  .leftu{
+  .leftu {
     position: relative;
     left: 8%;
   }
 }
 @media (max-width: 330px) {
-
   .first-text h2 {
     font-size: 17px;
-    margin-top: 80px;
+    margin-top: 140px;
   }
   .first-text p {
     display: none;
   }
-  .second-cont{
+  .second-cont {
     display: none;
   }
   .form {
     overflow-x: hidden;
     position: relative;
-    top:-10%;
+    top: -10%;
     left: 2%;
     width: 90%;
   }
@@ -535,7 +538,7 @@ form {
     width: 138px;
   }
   .register-second input {
-      width: 283px;
+    width: 283px;
   }
   .Reg-btn {
     font-size: 11px;
@@ -554,7 +557,7 @@ form {
     left: 60px;
     margin-top: 9px;
   }
-  .Reg-account{
+  .Reg-account {
     margin-left: 30px;
     width: 100%;
   }
@@ -563,14 +566,14 @@ form {
     width: 100%;
     font-size: 11px;
   }
-  .Reg-account a{
+  .Reg-account a {
     position: absolute;
     left: 106%;
     font-weight: 600;
     width: 80%;
     font-size: 11px;
   }
-  .leftu{
+  .leftu {
     position: relative;
     left: 8%;
   }
