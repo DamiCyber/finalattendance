@@ -361,6 +361,7 @@ form {
     top: -10%;
   }
   .register-second{
+    background-color: transparent;
     width: 374px;
   }
   .first-text h2 {
@@ -430,6 +431,7 @@ form {
     z-index: 11111;
   }
   .register-second{
+    background-color: transparent;
     width: 289px;
   }
   .first-text h2 {
@@ -510,6 +512,9 @@ form {
   .first-text h2 {
     font-size: 17px;
     margin-top: 140px;
+  }
+  .register-second{
+    background-color: transparent;
   }
   .first-text p {
     display: none;
