@@ -429,6 +429,9 @@ form {
   .whole-cont{
     z-index: 11111;
   }
+  .register-second{
+    width: 289px;
+  }
   .first-text h2 {
     font-size: 17px;
     margin-top: 140px;
