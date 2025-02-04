@@ -173,7 +173,7 @@ form {
 }
 .leftu {
   position: relative;
-  left: 0%;
+  left: 13%;
 }
 .Reg-btn {
   width: 500px;
@@ -308,6 +308,11 @@ form {
     left: 2%;
     width: 70%;
   }
+
+  
+  .register-second{
+    width: 380px;
+  }
   .first-text h2 {
     font-size: 27px;
     padding-bottom: 20px;
@@ -408,7 +413,7 @@ form {
     width: 380px;
   }
   .option {
-    font-size: 8px;
+    font-size: 12px;
   }
   .google {
     font-size: 11px;

@@ -1,41 +1,41 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios"; 
+import axios from "axios";
 import "../assets/style/register.css";
 
 const Register = () => {
-  const navigate = useNavigate(); 
- 
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     confirmPassword: "",
-    userType: "school", 
+    userType: "school",
   });
 
-  
+
   const [message, setMessage] = useState("");
 
- 
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-   
+
     if (formData.password !== formData.confirmPassword) {
       setMessage("Passwords do not match!");
       return;
     }
 
-   
+
     const payload = {
-      _type: formData.userType, 
+      _type: formData.userType,
       name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
       password: formData.password,
@@ -49,7 +49,7 @@ const Register = () => {
 
       if (response.status === 201) {
         setMessage("Registration successful! Redirecting...");
-        setTimeout(() => navigate("/login"), 2000); 
+        setTimeout(() => navigate("/login"), 2000);
       }
     } catch (error) {
       setMessage(
@@ -110,6 +110,9 @@ const Register = () => {
             </div>
           </div>
 
+          {/* Display message (error/success) */}
+          {message && <p className="message">{message}</p>}
+
           {/* Email Field */}
           <div className="register-second">
             <label>Email</label>
@@ -149,10 +152,7 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Display message (error/success) */}
-          {message && <p className="message">{message}</p>}
 
-       
           <div className="button-Reg">
             <button className="Reg-btn" type="submit">
               Register
@@ -180,6 +180,7 @@ const Register = () => {
           </div>
         </div>
       </form>
+    <div className="second-cont"></div>
     </div>
   );
 };
