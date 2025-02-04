@@ -290,7 +290,7 @@ form {
   .Reg-account {
     display: flex;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     margin-left: 100px;
     padding-top: 10px !important;
   }
