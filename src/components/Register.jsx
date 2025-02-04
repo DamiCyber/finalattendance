@@ -110,8 +110,7 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Display message (error/success) */}
-          {message && <p className="message">{message}</p>}
+
 
           {/* Email Field */}
           <div className="register-second">
@@ -151,6 +150,13 @@ const Register = () => {
               />
             </div>
           </div>
+          {/* Display message (error/success) */}
+
+          {message && (
+            <p style={{ color: message ==="Registration successful! Redirecting..." ? "green" : "red", fontSize: "14px" }}>
+              {message}
+            </p>
+          )}
 
 
           <div className="button-Reg">
@@ -180,7 +186,9 @@ const Register = () => {
           </div>
         </div>
       </form>
-    <div className="second-cont"></div>
+      <div className="second-cont">
+
+      </div>
     </div>
   );
 };
