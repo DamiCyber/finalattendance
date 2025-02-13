@@ -29,7 +29,7 @@
   width: 100%;
   padding-top: 50px;
 }
-.calendar-container{
+.calendar-container {
   margin-top: -90px;
 }
 .dash {
@@ -282,12 +282,12 @@ input:not(:placeholder-shown) ~ .reset {
   font-size: 23px;
   color: #ffffff;
 }
-.border{
+.border {
   margin-top: 100px;
   border-bottom: 1px solid #bdbdbd5e;
 }
 
-.board{
+.board {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -296,16 +296,16 @@ input:not(:placeholder-shown) ~ .reset {
   padding-bottom: 14px;
   transition: background-color 0.3s ease;
 }
-.board .link{
-  color: #FFF;
+.board .link {
+  color: #fff;
   font-family: Poppins;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
- .linka{
-  color: #FFF;
+.linka {
+  color: #fff;
   font-family: Poppins;
   font-size: 11px;
   font-style: normal;
@@ -316,4 +316,111 @@ input:not(:placeholder-shown) ~ .reset {
 .board.active {
   background-color: #3498db; /* Change to your preferred active color */
   border-radius: 8px;
+}
+@media (max-width:1234px) {
+.dashboard{
+  overflow-x: hidden;
+ }
+  nav {
+    overflow: hidden;
+    padding-left: 0px;
+  }
+  .side-logo h1 {
+    font-size: 30px;
+  }
+  .counter {
+    position: relative;
+    top: 10%;
+    left: 2%;
+    width: 947px;
+  }
+    .dash h2 {
+      margin-left: 20px;
+    font-size: 23px;
+  }
+  .sidebar {
+    width: 23%;
+  }
+  .tables {
+    position: relative;
+    top: 20%;
+    left: -2%;
+    display: flex;
+  }
+  .search {
+    position: relative;
+    width: 280px;
+    left: 2%;
+  }
+  .counter h2{
+    font-size: 33px;
+  }
+  .controls{
+    position: relative;
+   left: 2%;
+    gap: 10px;
+    /* width: 100px; */
+  }
+  .board{
+    padding-bottom: 24px;
+  }
+  .board .link{
+    font-size: 21px;
+    gap: 20px;
+    display: flex;
+    /* flex-direction: column; */
+  }
+  .linka{
+    font-size: 21px;
+    gap: 20px;
+    display: flex;
+    /* flex-direction: column; */
+  }
+}
+@media (max-width: 780px) {
+.dashboard{
+  overflow-x: hidden;
+ }
+  nav {
+    overflow: hidden;
+    padding-left: 0px;
+  }
+  .side-logo h1 {
+    font-size: 10px;
+  }
+  .counter {
+    position: relative;
+    left: 2%;
+    width: 643px;
+  }
+  .dash h2 {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .sidebar {
+    width: 19%;
+  }
+  .tables {
+    position: relative;
+    left: -5%;
+    display: flex;
+  }
+  .search {
+    position: relative;
+    width: 230px;
+    right: 2%;
+  }
+  .counter h2{
+    font-size: 30px;
+  }
+  .controls{
+    position: relative;
+    right: 6%;
+    gap: 10px;
+    /* width: 100px; */
+  }
+  .board{
+    display: flex;
+    /* flex-direction: column; */
+  }
 }
