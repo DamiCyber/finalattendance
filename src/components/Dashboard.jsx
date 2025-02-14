@@ -71,7 +71,7 @@ const Dashboard = () => {
                 <path d="M15.3333 15.6667H0.666626C0.393293 15.6667 0.166626 15.44 0.166626 15.1667C0.166626 14.8934 0.393293 14.6667 0.666626 14.6667H15.3333C15.6066 14.6667 15.8333 14.8934 15.8333 15.1667C15.8333 15.44 15.6066 15.6667 15.3333 15.6667Z" fill="white" />
                 <path d="M8 6.66669C7.17333 6.66669 6.5 5.99335 6.5 5.16669C6.5 4.34002 7.17333 3.66669 8 3.66669C8.82667 3.66669 9.5 4.34002 9.5 5.16669C9.5 5.99335 8.82667 6.66669 8 6.66669ZM8 4.66669C7.72667 4.66669 7.5 4.89335 7.5 5.16669C7.5 5.44002 7.72667 5.66669 8 5.66669C8.27333 5.66669 8.5 5.44002 8.5 5.16669C8.5 4.89335 8.27333 4.66669 8 4.66669Z" fill="white" />
               </svg>
-              <Link to="/Billings" className="link" >Billing</Link>
+              <Link to="/Billings" className="link" >Finance</Link>
             </div>
             <div className="board">
               <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281722/setting-2_nxazfr.svg
@@ -162,24 +162,27 @@ const Dashboard = () => {
               className="rounded-md border no-background"
             />
           </div>
-          <div className="chart-container mt-6">
-            <BarChart
-              width={400}
-              height={320}
-              data={chartData}
-              margin={{ top: 20, right: 10, left: 10, bottom: 5 }}
-              padding={{ left: 50 }}
-              barCategoryGap="20%"
-              barGap={7}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <div className="notify"></div>
-              <XAxis dataKey="day" />
-              <YAxis />
-              <Tooltip content={<CustomTooltip />} />
-              <Bar dataKey="red" fill="#FB7D5B" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="yellow" fill="#FCC43E" radius={[4, 4, 0, 0]} />
-            </BarChart>
+          <div className="chart-container mt-6 chat">
+            <div className="chat">
+              <BarChart
+                width={390}
+                height={260}
+                data={chartData}
+                margin={{ top: 20, right: 10, left: 10, bottom: 5 }}
+                padding={{ left: 50 }}
+                barCategoryGap="20%"
+                barGap={7}
+              >
+
+                <CartesianGrid strokeDasharray="3 3" />
+                <div className="notify"></div>
+                <XAxis dataKey="day" />
+                <YAxis />
+                <Tooltip content={<CustomTooltip />} />
+                <Bar dataKey="red" fill="#FB7D5B" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="yellow" fill="#FCC43E" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </div>
           </div>
         </div>
 

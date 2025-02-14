@@ -317,6 +317,17 @@ input:not(:placeholder-shown) ~ .reset {
   background-color: #3498db; /* Change to your preferred active color */
   border-radius: 8px;
 }
+.chat{
+  position: relative;
+  top:18%;
+  margin-left: -15px;
+}
+.chart-container{
+  border-radius: 10px;
+  background-color: white;
+  width:400px;
+  height:330px;
+}
 @media (max-width:1234px) {
 .dashboard{
   overflow-x: hidden;
