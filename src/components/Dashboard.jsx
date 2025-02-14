@@ -163,10 +163,29 @@ const Dashboard = () => {
             />
           </div>
           <div className="chart-container mt-6 chat">
+            <div className="all-details">
+              <div className="details">
+                <h1>Student perfomance</h1>
+              </div>
+              <div className="days">
+                <div className="imag">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <circle cx="6" cy="6" r="4.5" fill="white" stroke="#FCC43E" stroke-width="3" />
+                  </svg>
+                  <p>This Week</p>
+                </div>
+                <div className="imag2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <circle cx="6.07104" cy="6.5" r="4.5" fill="white" stroke="#FB7D5B" stroke-width="3" />
+                  </svg>
+                  <p>Last Week</p>
+                </div>
+              </div>
+            </div>
             <div className="chat">
               <BarChart
-                width={390}
-                height={260}
+                width={460}
+                height={290}
                 data={chartData}
                 margin={{ top: 20, right: 10, left: 10, bottom: 5 }}
                 padding={{ left: 50 }}

@@ -27,7 +27,7 @@
   padding: 45px;
   justify-content: space-between;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .calendar-container {
   margin-top: -90px;
@@ -186,7 +186,7 @@ input:not(:placeholder-shown) ~ .reset {
 .counter {
   width: 1115px;
   position: relative;
-  top: 5%;
+  top: 4%;
   left: 45px;
   height: 140px;
   flex-shrink: 0;
@@ -314,24 +314,61 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 .board.active {
-  background-color: #3498db; /* Change to your preferred active color */
+  background-color: #3498db;
   border-radius: 8px;
 }
-.chat{
+.chat {
   position: relative;
-  top:18%;
-  margin-left: -15px;
+  top: 6%;
+  margin-left: 18px;
 }
-.chart-container{
+.days p {
+  color: var(--Color-Gray-3, #a098ae);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.chart-container {
   border-radius: 10px;
   background-color: white;
-  width:400px;
-  height:330px;
+  width: 500px;
+  height: 360px;
 }
-@media (max-width:1234px) {
-.dashboard{
-  overflow-x: hidden;
- }
+.details h1 {
+  color: var(--Color-Text, #303972);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.days {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.imag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.imag2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.all-details {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 1234px) {
+  .dashboard {
+    overflow-x: hidden;
+  }
   nav {
     overflow: hidden;
     padding-left: 0px;
@@ -345,8 +382,8 @@ input:not(:placeholder-shown) ~ .reset {
     left: 2%;
     width: 947px;
   }
-    .dash h2 {
-      margin-left: 20px;
+  .dash h2 {
+    margin-left: 20px;
     font-size: 23px;
   }
   .sidebar {
@@ -363,25 +400,25 @@ input:not(:placeholder-shown) ~ .reset {
     width: 280px;
     left: 2%;
   }
-  .counter h2{
+  .counter h2 {
     font-size: 33px;
   }
-  .controls{
+  .controls {
     position: relative;
-   left: 2%;
+    left: 2%;
     gap: 10px;
     /* width: 100px; */
   }
-  .board{
+  .board {
     padding-bottom: 24px;
   }
-  .board .link{
+  .board .link {
     font-size: 21px;
     gap: 20px;
     display: flex;
     /* flex-direction: column; */
   }
-  .linka{
+  .linka {
     font-size: 21px;
     gap: 20px;
     display: flex;
@@ -389,9 +426,9 @@ input:not(:placeholder-shown) ~ .reset {
   }
 }
 @media (max-width: 780px) {
-.dashboard{
-  overflow-x: hidden;
- }
+  .dashboard {
+    overflow-x: hidden;
+  }
   nav {
     overflow: hidden;
     padding-left: 0px;
@@ -421,16 +458,16 @@ input:not(:placeholder-shown) ~ .reset {
     width: 230px;
     right: 2%;
   }
-  .counter h2{
+  .counter h2 {
     font-size: 30px;
   }
-  .controls{
+  .controls {
     position: relative;
     right: 6%;
     gap: 10px;
     /* width: 100px; */
   }
-  .board{
+  .board {
     display: flex;
     /* flex-direction: column; */
   }
