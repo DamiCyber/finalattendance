@@ -72,6 +72,7 @@ const Register = () => {
               <option value="school">School</option>
               <option value="teacher">Teacher</option>
               <option value="parent">Parent</option>
+              
             </select>
           </div>
 

@@ -137,6 +137,7 @@ const Login = () => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className="dropdown"
+                  
                 >
                   <option value="school">School</option>
                   <option value="teacher">Teacher</option>
