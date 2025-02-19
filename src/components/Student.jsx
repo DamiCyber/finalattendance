@@ -96,7 +96,7 @@ const Student = () => {
                 </svg>
               </div>
               <div className="add">
-                <Link to="/AddTeachers" className='add-button'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                <Link to="/AddTeachers" className='add-button1'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
                   <path d="M6.84703 10.6647H0.882324V6.42941H6.84703V0.5H11.0823V6.42941H17.1176V10.6647H11.0823V16.6647H6.84703V10.6647Z" fill="white" />
                 </svg>
                   <p>New Student</p></Link>

@@ -193,7 +193,7 @@ input:not(:placeholder-shown) ~ .reset {
   font-weight: 400;
   line-height: normal;
 }
-.add-button  {
+.add-button1  {
  width: 200px;
   padding: 9px;
   border-radius: 25px;
