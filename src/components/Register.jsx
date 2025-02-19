@@ -12,30 +12,25 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    userType: "school",
+    _type: "school", // Changed from userType to _type
   });
 
-
   const [message, setMessage] = useState("");
-
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
 
     if (formData.password !== formData.confirmPassword) {
       setMessage("Passwords do not match!");
       return;
     }
 
-
     const payload = {
-      _type: formData.userType,
+      _type: formData._type, // Use _type directly from formData
       name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
       password: formData.password,
@@ -73,11 +68,7 @@ const Register = () => {
           {/* User Type Selection */}
           <div className="register-second">
             <label>User Type</label>
-            <select
-              name="userType"
-              value={formData.userType}
-              onChange={handleChange}
-            >
+            <select name="_type" value={formData._type} onChange={handleChange}>
               <option value="school">School</option>
               <option value="teacher">Teacher</option>
               <option value="parent">Parent</option>
@@ -109,8 +100,6 @@ const Register = () => {
               />
             </div>
           </div>
-
-
 
           {/* Email Field */}
           <div className="register-second">
@@ -153,11 +142,18 @@ const Register = () => {
           {/* Display message (error/success) */}
 
           {message && (
-            <p style={{ color: message ==="Registration successful! Redirecting..." ? "green" : "red", fontSize: "14px" }}>
+            <p
+              style={{
+                color:
+                  message === "Registration successful! Redirecting..."
+                    ? "green"
+                    : "red",
+                fontSize: "14px",
+              }}
+            >
               {message}
             </p>
           )}
-
 
           <div className="button-Reg">
             <button className="Reg-btn" type="submit">
@@ -186,9 +182,7 @@ const Register = () => {
           </div>
         </div>
       </form>
-      <div className="second-cont">
-
-      </div>
+      <div className="second-cont"></div>
     </div>
   );
 };

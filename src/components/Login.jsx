@@ -8,24 +8,31 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   let navigate = useNavigate();
 
   const validationSchema = yup.object({
     username: yup
       .string()
-      .email("Invalid email")
-      .required("Required")
-      .max(40)
-      .min(3),
+      .email("Please enter a valid email address")
+      .required("Email is required")
+      .trim()
+      .max(40, "Email must not exceed 40 characters")
+      .min(3, "Email must be at least 3 characters"),
     password: yup
       .string()
       .matches(
         /^[a-zA-Z0-9]+$/,
         "Password must contain only letters and numbers"
       )
-      .required("Required")
+      .required("Password is required")
+      .trim()
       .min(8, "Password must be at least 8 characters")
       .max(20, "Password cannot exceed 20 characters"),
+    userType: yup
+      .string()
+      .required("Please select a user type")
+      .oneOf(["school", "teacher", "parent"], "Invalid user type"),
   });
 
   const { handleChange, handleSubmit, handleBlur, values, errors, touched } =
@@ -33,38 +40,77 @@ const Login = () => {
       initialValues: {
         username: "",
         password: "",
+        userType: "school", // default value
       },
       validationSchema: validationSchema,
-      onSubmit: (values) => {
-        console.log("Submitting:", values);
-        axios
-          .post("https://attendipen-d65abecaffe3.herokuapp.com/auth/login", {
-            email: values.username,
-            password: values.password,
-            _type: "school",
-          })
-          .then((response) => {
-            console.log("Response:", response);
-            if (response.status === 200) {
-              Swal.fire({
-                title: "Welcome to Attendipen",
-                icon: "success",
-                confirmButtonText: "Thank You",
-              });
+      onSubmit: async (values) => {
+        if (!values.username.trim() || !values.password.trim()) {
+          setErrorMessage("Please fill in all fields");
+          return;
+        }
 
-              const token = response.data.access_token;
-              localStorage.setItem("token", token);
-              navigate("/Dashboard");
+        setIsLoading(true);
+        setErrorMessage("");
+
+        try {
+          const response = await axios.post(
+            "https://attendipen-d65abecaffe3.herokuapp.com/auth/login",
+            {
+              email: values.username.trim(),
+              password: values.password.trim(),
+              _type: values.userType,
+            },
+            {
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
             }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            if (error.response && error.response.status === 401) {
-              setErrorMessage("Unauthorized: Invalid email or password.");
-            } else {
-              setErrorMessage("Something went wrong. Please try again later.");
+          );
+
+          if (response.data && response.data.access_token) {
+            localStorage.setItem("token", response.data.access_token);
+            if (response.data.user) {
+              localStorage.setItem("user", JSON.stringify(response.data.user));
             }
-          });
+
+            Swal.fire({
+              title: "Welcome to Attendipen",
+              icon: "success",
+              confirmButtonText: "Thank You",
+            });
+
+            navigate("/Dashboard");
+          }
+        } catch (error) {
+          console.error("Login error:", error);
+          if (error.response) {
+            switch (error.response.status) {
+              case 401:
+                setErrorMessage("Invalid email or password. Please try again.");
+                break;
+              case 422:
+                setErrorMessage(
+                  error.response.data.message ||
+                    "Invalid input. Please check your credentials."
+                );
+                break;
+              case 429:
+                setErrorMessage(
+                  "Too many login attempts. Please try again later."
+                );
+                break;
+              default:
+                setErrorMessage("Login failed. Please try again.");
+            }
+          } else {
+            setErrorMessage(
+              "Cannot connect to server. Please check your internet connection."
+            );
+          }
+        } finally {
+          setIsLoading(false);
+        }
       },
     });
 
@@ -79,6 +125,25 @@ const Login = () => {
               <p>Please enter your Attendance credentials.</p>
             </div>
             <div className="login">
+              <div className="drop">
+                <label htmlFor="userType">User Type</label>
+                <div style={{ color: "red" }} className="err">
+                  {touched.userType && errors.userType}
+                </div>
+                <select
+                  name="userType"
+                  id="userType"
+                  value={values.userType}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className="dropdown"
+                >
+                  <option value="school">School</option>
+                  <option value="teacher">Teacher</option>
+                  <option value="parent">Parent</option>
+                </select>
+              </div>
+
               <label htmlFor="username">Email ID</label>
               <div style={{ color: "red" }} className="err">
                 {touched.username && errors.username}
@@ -128,8 +193,8 @@ const Login = () => {
             </div>
 
             <div className="button-container">
-              <button type="submit" className="login-btn">
-                LOGIN
+              <button type="submit" className="login-btn" disabled={isLoading}>
+                {isLoading ? "LOGGING IN..." : "LOGIN"}
               </button>
             </div>
 
