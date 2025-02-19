@@ -9,6 +9,7 @@ import Student from './components/Student'
 import Billings from './components/Billings'
 import Setting from './components/Setting'
 import Exams from './components/Exams'
+import AddTeachers from './components/AddTeachers'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Route path="/Billings" element={<Billings />} />
       <Route path="/Setting" element={<Setting />} />
       <Route path="/Exams" element={<Exams />} />
+      <Route path="/AddTeachers" element={<AddTeachers />} />
     </Routes>
   
     </>

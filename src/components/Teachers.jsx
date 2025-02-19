@@ -58,17 +58,8 @@ const Teachers = () => {
         </div>
         <div className="sidebar2">
           <nav>
-            <div className="dash">
-              <h2>Dashboard</h2>
-            </div>
-            <div class="search">
-              <button class="search-btn" type="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path d="M27.6 25.8L22 20.2C23.3 18.5 24.1 16.4 24.1 14.1C24.1 8.59998 19.6 4.09998 14.1 4.09998C8.6 4.09998 4 8.59998 4 14.1C4 19.6 8.5 24.1 14 24.1C16.3 24.1 18.5 23.3 20.2 21.9L25.8 27.5C26 27.7 26.4 27.9 26.7 27.9C27 27.9 27.3 27.8 27.6 27.5C28.1 27.1 28.1 26.3 27.6 25.8ZM6.5 14.1C6.5 9.99998 9.9 6.59998 14 6.59998C18.1 6.59998 21.5 9.99998 21.5 14.1C21.5 18.2 18.1 21.6 14 21.6C9.9 21.6 6.5 18.3 6.5 14.1Z" fill="#4D44B5" />
-                </svg>
-              </button>
-              <input class="input" type="search" placeholder="Search here..." />
-
+            <div className="dashside">
+              <h2>Teachers</h2>
             </div>
             <div className="controls">
               <div className="notify">
@@ -87,6 +78,35 @@ const Teachers = () => {
               </div>
             </div>
           </nav>
+          <div className="nav-teacher">
+            <div class="searchtea">
+              <button class="searchtea-btn" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M27.6 25.8L22 20.2C23.3 18.5 24.1 16.4 24.1 14.1C24.1 8.59998 19.6 4.09998 14.1 4.09998C8.6 4.09998 4 8.59998 4 14.1C4 19.6 8.5 24.1 14 24.1C16.3 24.1 18.5 23.3 20.2 21.9L25.8 27.5C26 27.7 26.4 27.9 26.7 27.9C27 27.9 27.3 27.8 27.6 27.5C28.1 27.1 28.1 26.3 27.6 25.8ZM6.5 14.1C6.5 9.99998 9.9 6.59998 14 6.59998C18.1 6.59998 21.5 9.99998 21.5 14.1C21.5 18.2 18.1 21.6 14 21.6C9.9 21.6 6.5 18.3 6.5 14.1Z" fill="#4D44B5" />
+                </svg>
+              </button>
+              <input class="input" type="search" placeholder="Search here..." />
+
+            </div>
+            <div className="controllers">
+              <div className="newest-button">
+                <p> Newest</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 21 14" fill="none">
+                  <path d="M20.6761 2.48797L11.2361 12.952C10.8521 13.4 10.1481 13.4 9.76415 12.952L0.324149 2.48797C-0.283851 1.81597 0.164149 0.727966 1.06015 0.727966L19.9401 0.727966C20.8361 0.727966 21.2841 1.81597 20.6761 2.48797Z" fill="#152259" />
+                </svg>
+              </div>
+              <div className="add">
+                <Link to="/AddTeachers" className='add-button'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                  <path d="M6.84703 10.6647H0.882324V6.42941H6.84703V0.5H11.0823V6.42941H17.1176V10.6647H11.0823V16.6647H6.84703V10.6647Z" fill="white" />
+                </svg>
+                  <p>New Teacher</p></Link>
+
+              </div>
+            </div>
+          </div>
+          <div className="Api-map-out">
+            {/* Api to be displayed here */}
+          </div>
         </div>
       </div>
     </div>
