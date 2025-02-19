@@ -193,7 +193,7 @@ input:not(:placeholder-shown) ~ .reset {
   font-weight: 400;
   line-height: normal;
 }
-.add-button {
+.add-button2 {
   width: 200px;
   padding: 9px;
   border-radius: 25px;
@@ -201,7 +201,7 @@ input:not(:placeholder-shown) ~ .reset {
   border: 2px solid #4d44b5;
   box-shadow: 0px 20px 50px 0px rgba(191, 21, 108, 0.05);
   color: white;
-  background: var(--Color-Purple, #4d44b5);
+  background: var(--Color-Purple, #152259);
   display: flex;
   justify-content: center;
   align-items: center;

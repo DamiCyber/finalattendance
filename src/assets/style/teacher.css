@@ -200,7 +200,7 @@ input:not(:placeholder-shown) ~ .reset {
   gap: 21px;
   border: 2px solid #4d44b5;
   color: white;
-  background-color: #152259;
+  background-color: #4d44b5;
   display: flex;
   justify-content: center;
   align-items: center;
