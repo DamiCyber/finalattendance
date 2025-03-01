@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../assets/style/teacher.css";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
 const Teachers = () => {
+  const BASE_URL = "https://attendipen-d65abecaffe3.herokuapp.com/teachers/all";
+  const [teachers, setTeachers] = useState([]);
+
+  useEffect(() => {
+    axios.get(BASE_URL,{
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        setTeachers(res.data.results);
+        console.log(res.data.results);
+      })
+      .catch((error) => {
+        console.error('Error fetching data: ', error);
+      });
+  }, [BASE_URL]);
   return (
     <div>
       <div className="dashboard">
@@ -106,6 +126,14 @@ const Teachers = () => {
           </div>
           <div className="Api-map-out">
             {/* Api to be displayed here */}
+            <h2>Teachers List</h2>
+            <ul>
+              {teachers.map((teacher) => (
+                <li key={teacher.id}>
+                  {teacher.name} - {teacher.email} ({teacher.gender})
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
