@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
 import "../assets/style/dashboard.css";
@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [date, setDate] = React.useState(new Date());
-
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    // Retrieve the user from localStorage
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser)); // Convert back to object
+    }
+  }, []);
   const chartData = [
     { day: "Mon", red: 220, yellow: 270 },
     { day: "Tue", red: 170, yellow: 120 },
@@ -114,7 +121,8 @@ const Dashboard = () => {
               </svg>
             </div>
             <div className="user">
-              <h1>Joshua N.</h1>
+              {/* username */}
+              <h1>Welcome, {user ? user.name : "Guest"}!</h1>
               <p>Admin</p>
             </div>
             <div className="user-pics">
@@ -139,7 +147,7 @@ const Dashboard = () => {
             </div>
             <div className="count3">
               <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281723/Calendar_y5hl1n.svg" alt="" />
-              <div className="text">
+              <div className="text"> 
                 <p>Events</p>
                 <h2>40K</h2>
               </div>

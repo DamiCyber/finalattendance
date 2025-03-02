@@ -92,7 +92,7 @@ const Login = () => {
               case 422:
                 setErrorMessage(
                   error.response.data.message ||
-                    "Invalid input. Please check your credentials."
+                  "Invalid input. Please check your credentials."
                 );
                 break;
               case 429:
