@@ -530,7 +530,7 @@ form {
     display: none;
   }
   .form {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
     top: -10%;
     left: 2%;

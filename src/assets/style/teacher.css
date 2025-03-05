@@ -168,17 +168,17 @@ input:not(:placeholder-shown) ~ .reset {
   border-radius: 40px;
   background: var(--Color-Gray-2, #c1bbeb);
 }
-.nav-teacher{
+.nav-teacher {
   display: flex;
   justify-content: space-between;
   padding: 30px;
 }
-.controllers{
+.controllers {
   display: flex;
   gap: 10px;
 }
 .newest-button {
- width: 200px;
+  width: 200px;
   padding: 9px;
   border-radius: 25px;
   gap: 24px;
@@ -193,8 +193,8 @@ input:not(:placeholder-shown) ~ .reset {
   font-weight: 400;
   line-height: normal;
 }
-.add-button1  {
- width: 200px;
+.add-button1 {
+  width: 200px;
   padding: 9px;
   border-radius: 25px;
   gap: 21px;
@@ -210,12 +210,37 @@ input:not(:placeholder-shown) ~ .reset {
   font-weight: 400;
   line-height: normal;
 }
-.Api-map-out{
+.Api-map-out {
   position: relative;
   top: -3%;
-  width:100%;
+  width: 100%;
   overflow-x: hidden;
-  height: 494px;
+  height: 464px;
+}
+.identity {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+  padding-left: 40px;
+  align-items: center;
+  padding-top: 20px;
+}
+.cover-teacher {
+  border-radius: 13px;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 15px;
+  background-color: white;
+  width: 97%;
+}
+.teacher-card {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 30px;
+  align-items: center;
+  padding-top: 20px;
 }
 @media (max-width: 1234px) {
   .dashboard {

@@ -8,15 +8,16 @@ const Teachers = () => {
   const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
-    axios.get(BASE_URL,{
+    console.log(localStorage.getItem("token"))
+    axios.get(BASE_URL, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
       },
     })
       .then((res) => {
-        setTeachers(res.data.results);
-        console.log(res.data.results);
+        setTeachers(res.data);
+        console.log(res.data);
       })
       .catch((error) => {
         console.error('Error fetching data: ', error);
@@ -126,14 +127,22 @@ const Teachers = () => {
           </div>
           <div className="Api-map-out">
             {/* Api to be displayed here */}
-            <h2>Teachers List</h2>
-            <ul>
+            <div className="identity">
+              <h2>Name</h2>
+              <h2>Gmail</h2>
+              <h2>Gender</h2>
+            </div>
+
+            <div className="teachers-joint">
               {teachers.map((teacher) => (
-                <li key={teacher.id}>
-                  {teacher.name} - {teacher.email} ({teacher.gender})
-                </li>
+                <div key={teacher.id}
+                  className="teacher-card cover-teacher">
+                  <div>{teacher.name}</div>
+                  <div> {teacher.email}</div>
+                  <div>{teacher.gender}</div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
