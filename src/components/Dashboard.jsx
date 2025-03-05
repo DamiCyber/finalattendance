@@ -147,7 +147,7 @@ const Dashboard = () => {
             </div>
             <div className="count3">
               <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281723/Calendar_y5hl1n.svg" alt="" />
-              <div className="text"> 
+              <div className="text">
                 <p>Events</p>
                 <h2>40K</h2>
               </div>

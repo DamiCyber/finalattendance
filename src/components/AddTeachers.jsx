@@ -40,7 +40,7 @@ const AddTeachers = () => {
 
         if (response.status === 200) {
           Swal.fire({
-            title: "Teacher successfully added",
+            title: "Invite sent successfully",
             icon: "success",
             confirmButtonText: "OK",
           }).then(() => navigate("/Teachers"));
@@ -134,7 +134,6 @@ const AddTeachers = () => {
         <div className="content">
           {/* <h2>Add Teacher</h2> */}
           <form onSubmit={formik.handleSubmit}>
-
 
             <input
               type="email"

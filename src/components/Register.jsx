@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2"; // ✅ Import SweetAlert
 import "../assets/style/register.css";
 
 const Register = () => {
   const navigate = useNavigate();
-
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +18,7 @@ const Register = () => {
 
   const [message, setMessage] = useState("");
 
+  // ✅ Added missing handleChange function
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -29,8 +31,10 @@ const Register = () => {
       return;
     }
 
+    setIsLoading(true); // Set loading before making the request
+
     const payload = {
-      _type: formData._type, // Use _type directly from formData
+      _type: formData._type,
       name: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
       password: formData.password,
@@ -43,13 +47,26 @@ const Register = () => {
       );
 
       if (response.status === 201) {
+        Swal.fire({
+          title: "Registration Successful",
+          icon: "success",
+          confirmButtonText: "Thank You",
+        });
+
         setMessage("Registration successful! Redirecting...");
         setTimeout(() => navigate("/login"), 2000);
       }
     } catch (error) {
-      setMessage(
-        error.response?.data?.message || "Registration failed. Try again."
-      );
+      Swal.fire({
+        title: "Registration Failed, try again!",
+        text: error.response?.data?.message || "An error occurred.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+
+      setMessage(error.response?.data?.message || "Registration failed. Try again.");
+    } finally {
+      setIsLoading(false); // Reset loading state after request completes
     }
   };
 
@@ -72,7 +89,6 @@ const Register = () => {
               <option value="school">School</option>
               <option value="teacher">Teacher</option>
               <option value="parent">Parent</option>
-              
             </select>
           </div>
 
@@ -140,25 +156,13 @@ const Register = () => {
               />
             </div>
           </div>
-          {/* Display message (error/success) */}
 
-          {message && (
-            <p
-              style={{
-                color:
-                  message === "Registration successful! Redirecting..."
-                    ? "green"
-                    : "red",
-                fontSize: "14px",
-              }}
-            >
-              {message}
-            </p>
-          )}
+          {/* Display error/success message */}
+          {message && <p className="message">{message}</p>}
 
           <div className="button-Reg">
-            <button className="Reg-btn" type="submit">
-              Register
+            <button className="Reg-btn" type="submit" disabled={isLoading}>
+              {isLoading ? "REGISTERING..." : "REGISTER"}
             </button>
           </div>
 
