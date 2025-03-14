@@ -10,6 +10,8 @@ import Billings from './components/Billings'
 import Setting from './components/Setting'
 import Exams from './components/Exams'
 import AddTeachers from './components/AddTeachers'
+import AddStudents from './components/AddStudents'
+import CreateSchool from './components/CreateSchool'
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
       <Route path="/Setting" element={<Setting />} />
       <Route path="/Exams" element={<Exams />} />
       <Route path="/AddTeachers" element={<AddTeachers />} />
+     <Route path="/AddStudent" element={<AddStudents/>}/>
+     <Route path="/CreateSchools" element={<CreateSchool/>}/>
     </Routes>
   
     </>
