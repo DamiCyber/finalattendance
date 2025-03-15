@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'; // Import missing hooks
 import "../assets/style/student.css";
 import { Link } from "react-router-dom";
+import axios from "axios"; // Import Axios
+
 const Student = () => {
+  const BASE_URL = "https://attendipen-d65abecaffe3.herokuapp.com/classes/1/students";
+  const [students, setStudents] = useState([]); // Rename to `students`
+
+  useEffect(() => {
+    console.log(localStorage.getItem("token"));
+
+    axios.get(BASE_URL, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        setStudents(res.data); // Ensure state is set correctly
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data: ', error);
+      });
+  }, []); // Remove BASE_URL from dependency array
+
   return (
     <div>
       <div className="dashboard">
@@ -41,7 +64,7 @@ const Student = () => {
               </div>
               <div className="board">
                 <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281722/setting-2_nxazfr.svg
-                      " alt="" />
+                              " alt="" />
                 <Link to="/Setting" className="linka" >Settings and profile</Link>
               </div>
               <div className="board">
@@ -59,7 +82,7 @@ const Student = () => {
         <div className="sidebar2">
           <nav>
             <div className="dashside">
-              <h2>Add Teachers</h2>
+              <h2>Teachers</h2>
             </div>
             <div className="controls">
               <div className="notify">
@@ -91,12 +114,12 @@ const Student = () => {
             <div className="controllers">
               <div className="newest-button">
                 <p> Newest</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
-                  <path d="M26.6761 11.488L17.2361 21.952C16.8521 22.4 16.1481 22.4 15.7641 21.952L6.32415 11.488C5.71615 10.816 6.16415 9.72803 7.06015 9.72803L25.9401 9.72803C26.8361 9.72803 27.2841 10.816 26.6761 11.488Z" fill="#4D44B5" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 21 14" fill="none">
+                  <path d="M20.6761 2.48797L11.2361 12.952C10.8521 13.4 10.1481 13.4 9.76415 12.952L0.324149 2.48797C-0.283851 1.81597 0.164149 0.727966 1.06015 0.727966L19.9401 0.727966C20.8361 0.727966 21.2841 1.81597 20.6761 2.48797Z" fill="#152259" />
                 </svg>
               </div>
               <div className="add">
-                <Link to="/AddStudent" className='add-button1'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                <Link to="/AddStudent" className='add-button2'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
                   <path d="M6.84703 10.6647H0.882324V6.42941H6.84703V0.5H11.0823V6.42941H17.1176V10.6647H11.0823V16.6647H6.84703V10.6647Z" fill="white" />
                 </svg>
                   <p>New Student</p></Link>
@@ -106,11 +129,29 @@ const Student = () => {
           </div>
           <div className="Api-map-out">
             {/* Api to be displayed here */}
+            <div className="sidebar2">
+              <nav>
+                <div className="dashside">
+                  <h2>Student List</h2>
+                </div>
+                <ul>
+                  {students.length > 0 ? (
+                    students.map((student) => (
+                      <li key={student.id}>{student.name}</li>
+                    ))
+                  ) : (
+                    <p>No students found</p>
+                  )}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default Student
+    </div>
+
+  );
+};
+
+export default Student;

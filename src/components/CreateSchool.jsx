@@ -11,16 +11,12 @@ const CreateClass = () => {
 
   // Validation schema
   const validationSchema = yup.object({
-    className: yup.string().required("Class Name is required"),
-    subject: yup.string().required("Subject is required"),
-    teacherName: yup.string().required("Teacher's Name is required"),
+    name: yup.string().required("Class Name is required"),
   });
 
   const formik = useFormik({
     initialValues: {
-      className: "",
-      subject: "",
-      teacherName: "",
+      name: "",
     },
     validationSchema: validationSchema,
     onSubmit: async (values) => {
@@ -86,40 +82,15 @@ const CreateClass = () => {
       <form onSubmit={formik.handleSubmit}>
         <input
           type="text"
-          name="className"
+          name="name"
           placeholder="Class Name"
-          value={formik.values.className}
+          value={formik.values.name}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        {formik.touched.className && formik.errors.className && (
-          <p className="error">{formik.errors.className}</p>
+        {formik.touched.name && formik.errors.name && (
+          <p className="error">{formik.errors.name}</p>
         )}
-
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={formik.values.subject}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.touched.subject && formik.errors.subject && (
-          <p className="error">{formik.errors.subject}</p>
-        )}
-
-        <input
-          type="text"
-          name="teacherName"
-          placeholder="Teacher's Name"
-          value={formik.values.teacherName}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-        />
-        {formik.touched.teacherName && formik.errors.teacherName && (
-          <p className="error">{formik.errors.teacherName}</p>
-        )}
-
         <button type="submit">Create Class</button>
       </form>
     </div>

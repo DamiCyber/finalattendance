@@ -17,23 +17,29 @@ const AddStudents = () => {
       .required("Email is required")
       .max(28, "Email must be at most 28 characters")
       .min(8, "Email must be at least 8 characters"),
-    fullName: yup
+      student_name: yup
       .string()
       .required("Full Name is required")
       .min(3, "Full Name must be at least 3 characters"),
-    password: yup
+      student_dob: yup
       .string()
-      .required("Password is required")
-      .min(6, "Password must be at least 6 characters"),
+      .required("Full Name is required")
+      .min(3, "Full Name must be at least 3 characters"),
+      class_id: yup
+      .string()
+      .required("Full Name is required")
+      .min(1, "Full Name must be at least 3 characters"),
+   
     gender: yup.string().oneOf(["Male", "Female", "Other"], "Invalid gender").required("Gender is required"),
   });
 
   const formik = useFormik({
     initialValues: {
       email: "",
-      fullName: "",
-      password: "",
+      student_name: "",
+      student_dob: "",
       gender: "",
+      class_id: "",
     },
     validationSchema: validationSchema,
     onSubmit: async (values) => {
@@ -52,7 +58,7 @@ const AddStudents = () => {
 
       try {
         const response = await axios.post(
-          "https://attendipen-d65abecaffe3.herokuapp.com/invites/accept_admission/3",
+          "https://attendipen-d65abecaffe3.herokuapp.com/invites/send_invite",
           values,
           {
             headers: {
@@ -189,26 +195,48 @@ const AddStudents = () => {
 
             <input
               type="text"
-              name="fullName"
+              name="student_name"
               placeholder="Full Name"
-              value={formik.values.fullName}
+              value={formik.values.student_name}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.fullName && formik.errors.fullName && (
-              <p className="error">{formik.errors.fullName}</p>
+            {formik.touched.student_name && formik.errors.student_name && (
+              <p className="error">{formik.errors.student_name}</p>
             )}
 
             <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formik.values.password}
+              type="date"
+              name="student_dob"
+              placeholder="student dob"
+              value={formik.values.student_dob}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            {formik.touched.password && formik.errors.password && (
-              <p className="error">{formik.errors.password}</p>
+            {formik.touched.student_dob && formik.errors.student_dob && (
+              <p className="error">{formik.errors.student_dob}</p>
+            )}
+            <input
+              type="date"
+              name="student_dob"
+              placeholder="student dob"
+              value={formik.values.student_dob}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.student_dob && formik.errors.student_dob && (
+              <p className="error">{formik.errors.student_dob}</p>
+            )}
+            <input
+              type="number"
+              name="class_id"
+              placeholder="class"
+              value={formik.values.class_id}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.class_id && formik.errors.class_id && (
+              <p className="error">{formik.errors.class_id}</p>
             )}
 
             <select

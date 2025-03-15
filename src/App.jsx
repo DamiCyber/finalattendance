@@ -12,6 +12,8 @@ import Exams from './components/Exams'
 import AddTeachers from './components/AddTeachers'
 import AddStudents from './components/AddStudents'
 import CreateSchool from './components/CreateSchool'
+import SchoolAssign from './components/SchoolAssign'
+import ParentDash from './components/ParentDash'
 
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
       <Route path="/AddTeachers" element={<AddTeachers />} />
      <Route path="/AddStudent" element={<AddStudents/>}/>
      <Route path="/CreateSchools" element={<CreateSchool/>}/>
+     <Route path="/AssingTeachers" element={<SchoolAssign/>}/>
+     <Route path="/ParentDashboard" element={<ParentDash/>}/>
     </Routes>
   
     </>
