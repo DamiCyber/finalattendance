@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import Swal from "sweetalert2";
 import axios from "axios";
-import "../assets/style/Addstudent.css";
+import "../assets/style/addstudent.css";
 
 const AddStudents = () => {
   const navigate = useNavigate();
