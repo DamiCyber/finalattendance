@@ -51,7 +51,7 @@ const CreateClass = () => {
             title: "Class created successfully!",
             icon: "success",
             confirmButtonText: "OK",
-          }).then(() => navigate("/classes")); // Redirect to class list
+          }).then(() => navigate("/List")); // Redirect to class list
         }
       } catch (error) {
         let errorMessage = "An error occurred. Please try again.";
