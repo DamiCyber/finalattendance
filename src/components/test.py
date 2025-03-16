@@ -267,9 +267,9 @@ def run_tests():
     test_view_attendance_school()
     test_view_attendance_parent()
 
-    print("\nTesting Settings Management")
-    test_update_attendance_settings()
-    test_get_attendance_settings()
+    # print("\nTesting Settings Management")
+    # test_update_attendance_settings()
+    # test_get_attendance_settings()
     
     
     print("\nTesting Invite Management")

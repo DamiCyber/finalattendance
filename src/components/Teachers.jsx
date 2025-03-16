@@ -44,7 +44,7 @@ const Teachers = () => {
               </div>
               <div className="board">
                 <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281723/teacher_mmxcpi.svg" alt="" />
-                <Link to="/Student" className="link" >Students</Link>
+                <Link to="/class/:classId/students" className="link" >Students</Link>
               </div>
               <div className="board">
                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,12 +58,12 @@ const Teachers = () => {
                   <path d="M15.3333 15.6667H0.666626C0.393293 15.6667 0.166626 15.44 0.166626 15.1667C0.166626 14.8934 0.393293 14.6667 0.666626 14.6667H15.3333C15.6066 14.6667 15.8333 14.8934 15.8333 15.1667C15.8333 15.44 15.6066 15.6667 15.3333 15.6667Z" fill="white" />
                   <path d="M8 6.66669C7.17333 6.66669 6.5 5.99335 6.5 5.16669C6.5 4.34002 7.17333 3.66669 8 3.66669C8.82667 3.66669 9.5 4.34002 9.5 5.16669C9.5 5.99335 8.82667 6.66669 8 6.66669ZM8 4.66669C7.72667 4.66669 7.5 4.89335 7.5 5.16669C7.5 5.44002 7.72667 5.66669 8 5.66669C8.27333 5.66669 8.5 5.44002 8.5 5.16669C8.5 4.89335 8.27333 4.66669 8 4.66669Z" fill="white" />
                 </svg>
-                <Link to="/Billings" className="link" >Finance</Link>
+                <Link to="/List" className="link" >Class List</Link>
               </div>
               <div className="board">
                 <img src="https://res.cloudinary.com/dgxvuw8wd/image/upload/v1736281722/setting-2_nxazfr.svg
-                      " alt="" />
-                <Link to="/Setting" className="linka" >Settings and profile</Link>
+                    " alt="" />
+                <Link to="/Setting" className="linka" > Attendance Setting</Link>
               </div>
               <div className="board">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -72,7 +72,7 @@ const Teachers = () => {
                   <path d="M8.50673 4.89996H7.49339C7.07339 4.89996 6.7334 5.23997 6.7334 5.65997V12.1H9.26007V5.65997C9.26007 5.23997 8.92673 4.89996 8.50673 4.89996Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                   <path d="M11.0334 9.06665H9.26672V12.1H11.7934V9.82666C11.7867 9.40666 11.4467 9.06665 11.0334 9.06665Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <Link to="/Exams" className="link" >Exams</Link>
+                <Link to="/CreateClass" className="link" >Create Class</Link>
               </div>
             </ul>
           </nav>
@@ -117,7 +117,7 @@ const Teachers = () => {
                 </svg>
               </div>
               <div className="add">
-                <Link to="/AddTeachers" className='add-button2'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                <Link to="/sendIviteToTeachers" className='add-button2'> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
                   <path d="M6.84703 10.6647H0.882324V6.42941H6.84703V0.5H11.0823V6.42941H17.1176V10.6647H11.0823V16.6647H6.84703V10.6647Z" fill="white" />
                 </svg>
                   <p>New Teacher</p></Link>

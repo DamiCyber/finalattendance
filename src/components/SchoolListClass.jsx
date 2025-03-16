@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 
 const SchoolListClass = () => {
@@ -43,6 +43,7 @@ const SchoolListClass = () => {
           {classes.map((cls, index) => (
             <li key={index}>
               <strong>Class: </strong>{cls.name || "N/A"} <br />
+              <Link to={`/class/${cls.id}/students`}>View Students</Link>
             </li>
           ))}
         </ul>

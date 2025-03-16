@@ -21,10 +21,7 @@ const Login = () => {
       .min(3, "Email must be at least 3 characters"),
     password: yup
       .string()
-      .matches(
-        /^[a-zA-Z0-9]+$/,
-        "Password must contain only letters and numbers"
-      )
+      .matches(/^[a-zA-Z0-9]+$/, "Password must contain only letters and numbers")
       .required("Password is required")
       .trim()
       .min(8, "Password must be at least 8 characters")
@@ -58,7 +55,7 @@ const Login = () => {
             {
               email: values.username.trim(),
               password: values.password.trim(),
-              _type: values.userType,
+              _type: values.userType, // Send userType to backend
             },
             {
               headers: {
@@ -80,7 +77,20 @@ const Login = () => {
               confirmButtonText: "Thank You",
             });
 
-            navigate("/Dashboard");
+            // Redirect based on user type
+            switch (values.userType) {
+              case "school":
+                navigate("/Dashboard");
+                break;
+              case "teacher":
+                navigate("/Teacher");
+                break;
+              case "parent":
+                navigate("/Parent");
+                break;
+              default:
+                setErrorMessage("Invalid user role. Please try again.");
+            }
           }
         } catch (error) {
           console.error("Login error:", error);
@@ -96,18 +106,13 @@ const Login = () => {
                 );
                 break;
               case 429:
-                setErrorMessage(
-                  "Too many login attempts. Please try again later."
-                );
+                setErrorMessage("Too many login attempts. Please try again later.");
                 break;
               default:
                 setErrorMessage("Login failed. Please try again.");
             }
           } else {
-
-            setErrorMessage(
-              "Cannot connect to server. Please check your internet connection."
-            );
+            setErrorMessage("Cannot connect to server. Please check your internet connection.");
           }
         } finally {
           setIsLoading(false);
@@ -211,8 +216,7 @@ const Login = () => {
         <div className="second-con">
           <div className="text2">
             <p>
-              "Attendance is the first step to <br /> success, be present to
-              win."
+              "Attendance is the first step to <br /> success, be present to win."
             </p>
           </div>
         </div>
