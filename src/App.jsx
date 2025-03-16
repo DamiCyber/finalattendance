@@ -12,7 +12,7 @@ import AddStudents from './components/AddStudents'
 import CreateSchool from './components/CreateSchool'
 import SchoolAssign from './components/SchoolAssign'
 import SchoolListClass from "./components/SchoolListClass"
-import ViewAttendance from './lib/ViewAttendance'
+import ViewAttendance from './components/ViewAttendance'
 import Mark from './components/Mark'
 import ParentDash from './components/ParentDash'
 import TeachersDashboard from './components/TeachersDashboard'
