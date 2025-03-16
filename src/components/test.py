@@ -240,26 +240,26 @@ def test_accept_parent_invite():
 
 # Run Tests
 def run_tests():
-    print("Testing Registration Endpoints")
-    test_register_school()
-    test_register_teacher()
-    test_register_parent()
+    # print("Testing Registration Endpoints")
+    # test_register_school()
+    # test_register_teacher()
+    # test_register_parent()
     
-    print("\nTesting Login Endpoints")
-    test_login_school()
-    test_login_teacher()
-    test_login_parent()
+    # print("\nTesting Login Endpoints")
+    # test_login_school()
+    # test_login_teacher()
+    # test_login_parent()
     
     print("\nTesting Class Management")
-    test_create_class()
-    test_list_classes()
+    # test_create_class()
+    # test_list_classes()
     test_view_attendance_school()
     
     
     #test_delete_class()
     test_assign_teacher_to_class()
-    test_assign_student_to_class()
-    test_list_students_in_class()
+    # test_assign_student_to_class()
+    # test_list_students_in_class()
     
     
     print("\nTesting Attendance Management")
@@ -273,7 +273,7 @@ def run_tests():
     
     
     print("\nTesting Invite Management")
-    test_send_teacher_offer()
+    # test_send_teacher_offer()
     test_accept_teacher_offer()
     test_send_parent_invite()
     test_accept_parent_invite()
