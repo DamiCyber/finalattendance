@@ -83,7 +83,7 @@ const Login = () => {
                 navigate("/Dashboard");
                 break;
               case "teacher":
-                navigate("/Teacher");
+                navigate("/TeacherDashboard");
                 break;
               case "parent":
                 navigate("/Parent");

@@ -16,6 +16,8 @@ import ViewAttendance from './components/ViewAttendance'
 import Mark from './components/Mark'
 import ParentDash from './components/ParentDash'
 import TeachersDashboard from './components/TeachersDashboard'
+import ViewAllAttendance from './components/ViewAllAttendance'
+import AcceptTeacher from './components/AcceptTeacher'
 
 
 const App = () => {
@@ -33,11 +35,14 @@ const App = () => {
         <Route path="/sendIviteToTeachers" element={<AddTeachers />} />
         <Route path="/View" element={<ViewAttendance />} />
         <Route path="/Parent" element={<ParentDash />} />
-        <Route path="/Teacher" element={<TeachersDashboard />} />
+        <Route path="/TeacherDashboard" element={<TeachersDashboard />} />
         <Route path="/AddStudent" element={<AddStudents />} />
         <Route path="/class/:classId/students" element={<Student />} />
-        <Route path="/mark" element={<Mark />} /> {/* not working */}
-        <Route path="/AssignTeachers" element={<SchoolAssign />} />  {/* not working */}
+        <Route path="/ViewAll/:schoolId" element={<ViewAllAttendance />} />
+        {/* not working 403 */}  
+        <Route path="/accept" element={<AcceptTeacher />} /> {/* not working */}
+        <Route path="/MarkAttandance" element={<Mark />} /> {/* not working 403*/}
+        <Route path="/AssignStudent" element={<SchoolAssign />} />  {/* not working 403*/}
       </Routes>
 
     </>

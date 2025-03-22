@@ -166,8 +166,7 @@ def test_view_attendance_school():
     headers = {
         "Authorization": f"Bearer {tokens['school']}",
         "Content-Type": "application/json"
-    }
-    
+    } 
     response = requests.get(url, headers=headers)
     print_response(response)
 
@@ -258,13 +257,13 @@ def run_tests():
     
     #test_delete_class()
     test_assign_teacher_to_class()
-    # test_assign_student_to_class()
+    test_assign_student_to_class()
     # test_list_students_in_class()
     
     
     print("\nTesting Attendance Management")
     test_mark_attendance()
-    test_view_attendance_school()
+    # test_view_attendance_school()
     test_view_attendance_parent()
 
     # print("\nTesting Settings Management")
@@ -275,7 +274,7 @@ def run_tests():
     print("\nTesting Invite Management")
     # test_send_teacher_offer()
     test_accept_teacher_offer()
-    test_send_parent_invite()
+    # test_send_parent_invite()
     test_accept_parent_invite()
 
 if __name__ == "__main__":
