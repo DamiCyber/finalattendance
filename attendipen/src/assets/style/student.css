@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  height: 100vh;
+}
+.sidebar {
+  background-color: #152259;
+  width: 17%;
+  height: 100vh;
+}
+.sidebar2 {
+  height: 100vh;
+  width: 100%;
+}
+
+.dashside {
+  color: var(--Color-Text, #303972);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 13px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.searchtea button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+.searchtea {
+  --timing: 0.3s;
+  --width-of-input: 250px;
+  --height-of-input: 47px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #303972;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+
+.searchtea input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+
+.searchtea:before {
+  content: "";
+  position: absolute;
+  background: #4d44b5;
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+
+.searchtea:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+
+.searchtea:focus-within:before {
+  transform: scale(1);
+}
+
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+.searchtea svg {
+  width: 17px;
+  color: #303972;
+  margin-top: 3px;
+}
+.controls {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+.notify {
+  cursor: pointer;
+  padding: 10px;
+  background: var(--Color-White, #fff);
+  box-shadow: 0px 20px 50px 0px rgba(191, 21, 108, 0.05);
+  border-radius: 50%;
+}
+.notify img {
+  width: 30px;
+  height: 30px;
+}
+.setting {
+  cursor: pointer;
+  padding: 10px;
+  background: var(--Color-White, #fff);
+  box-shadow: 0px 20px 50px 0px rgba(191, 21, 108, 0.05);
+  border-radius: 50%;
+}
+.setting img {
+  width: 30px;
+  height: 30px;
+}
+.user h1 {
+  color: var(--Color-Text, #303972);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.user p {
+  color: var(--Color-Gray-3, #a098ae);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.user-pics {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  background: var(--Color-Gray-2, #c1bbeb);
+}
+.nav-teacher {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.controllers {
+  margin-left: 140px;
+  display: flex;
+  gap: 10px;
+}
+.newest-button {
+  width: 200px;
+  padding: 9px;
+  border-radius: 25px;
+  gap: 24px;
+  border: 2px solid #4d44b5;
+  color: var(--Color-Purple, #4d44b5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.add-button2 {
+  width: 200px;
+  padding: 9px;
+  border-radius: 25px;
+  gap: 21px;
+  border: 2px solid #4d44b5;
+  box-shadow: 0px 20px 50px 0px rgba(191, 21, 108, 0.05);
+  color: white;
+  background: var(--Color-Purple, #152259);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+  /* overflow-x: hidden; */
+  /* height: 494px; */

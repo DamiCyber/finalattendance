@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.err {
+  height: 20px;
+  color: red;
+  font-size: 12px;
+}
+form {
+  margin-top: -45px;
+  width: 50%;
+}
+.whole-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100vh !important;
+}
+.first-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.first-con h2 {
+  color: var(--D-1, #122539);
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+}
+.first-con h4 {
+  color: var(--D-2, #1f4062);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+}
+.first-con p {
+  width: 100% !;
+  color: var(--D-2, #1f4062);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+.second-con {
+  background-image: linear-gradient(
+      rgba(90, 145, 203, 0.5),
+      rgba(90, 145, 203, 0.5)
+    ),
+    url("https://res.cloudinary.com/dgxvuw8wd/image/upload/v1735513635/unsplash_iQPr1XkF5F0_gbb4bi.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 700px;
+  color: white;
+}
+.login {
+  gap: 6px;
+  color: var(--D-1, #122539);
+  display: flex;
+  flex-direction: column;
+}
+.login input {
+  text-indent: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--D-4, #5a91cb);
+  background: #fbfeff;
+  outline: none;
+  height: 35px;
+  width: 500px;
+}
+.login input::placeholder {
+  color: var(--D-5, #83acd8);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.remember {
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.remember label {
+  color: var(--D-2, #1f4062);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.forgot-password {
+  position: relative;
+
+  right: 20%;
+
+  text-decoration: none;
+  text-align: right;
+  color: var(--L-1, hsl(204, 88%, 53%)) !important;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.button-container {
+  position: relative;
+  top: 1%;
+  padding-top: 5px;
+}
+
+.login-btn {
+  width: 500px;
+  height: 40px;
+  display: flex;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #1d9bf0; /* Adjust the color as needed */
+}
+
+.account {
+  position: relative;
+  left: 13%;
+  top: 2%;
+  display: flex;
+  margin: 0px !important;
+}
+.ink {
+  position: relative;
+  color: var(--L-1, hsl(204, 88%, 53%)) !important;
+}
+.account p {
+  color: var(--L-1, hsl(204, 88%, 53%));
+}
+.account a {
+  text-decoration: none;
+  color: var(--D-2, #1f4062);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.text2 {
+  position: relative;
+  top: 85%;
+  text-align: center;
+  width: 100%;
+  color: var(--L-7, #e3f3fd);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-type-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.user-type-select:focus {
+  border-color: #007bff;
+}
+
+.drop {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.dropdown {
+  text-indent: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--D-4, #5a91cb);
+  background: #fbfeff;
+  outline: none;
+  height: 35px;
+  width: 500px;
+  color: var(--D-5, #83acd8);
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+@media (max-width: 1230px) {
+  form {
+    width: 60%;
+  }
+  .login input {
+    width: 400px;
+  }
+  .login-btn {
+    width: 400px;
+  }
+  .dropdown {
+    width: 400px;
+  }
+}
+@media (max-width: 770px) {
+  form {
+    width: 70%;
+  }
+  .login input {
+    width: 400px;
+  }
+  .login-btn {
+    width: 300px;
+  }
+  .forgot-password {
+    position: relative;
+
+    right: 14%;
+  }
+  .first-con {
+    padding: 0px;
+  }
+  .login input {
+    width: 300px;
+  }
+  .login-btn {
+    width: 300px;
+  }
+  .account {
+    display: flex;
+    position: relative;
+    left: -1%;
+    top: 10px;
+    padding: 0px;
+  }
+  .second-con {
+    width: 60%;
+  }
+  .dropdown {
+    width: 300px;
+  }
+}
+@media (max-width: 430px) {
+  form {
+    margin-top: -45px;
+    width: 100%;
+  }
+  .first-con {
+    position: relative;
+    left: 40%;
+  }
+  body {
+    height: 100vh;
+    background-color: white;
+  }
+  .second-con {
+    display: none;
+  }
+  .first-con {
+    margin-left: -120px;
+    padding: 0px;
+  }
+  .first-con h2 {
+    font-size: 25px;
+  }
+  .first-con h4 {
+    font-size: 18px;
+  }
+  .first-con p {
+    font-size: 14px;
+  }
+  label {
+    font-size: 13px;
+  }
+  .remember label {
+    font-size: 13px;
+  }
+  .forgot-password {
+    position: relative;
+    right: 45px;
+    font-size: 13px;
+  }
+  .account {
+    position: relative;
+    left: 1%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .ink {
+    width: 100%;
+  }
+
+  .account p {
+    font-size: 13px;
+    padding: 0px;
+    width: 100%;
+  }
+  .ink {
+    font-size: 13px !important;
+  }
+
+  .login input {
+    width: 300px;
+  }
+  .login-btn {
+    width: 300px;
+  }
+  .login {
+    gap: 2px;
+  }
+  .dropdown {
+    width: 300px;
+  }
+}
+@media (max-width: 380px) {
+  body {
+    height: 100vh;
+    background-color: white;
+  }
+
+  .second-con {
+    display: none;
+  }
+  .first-con {
+    margin-left: -120px;
+    padding: 0px;
+  }
+  .first-con h2 {
+    font-size: 25px;
+  }
+  .first-con h4 {
+    font-size: 18px;
+  }
+  .first-con p {
+    font-size: 14px;
+  }
+  label {
+    font-size: 13px;
+  }
+  .remember label {
+    font-size: 13px;
+  }
+  .forgot-password {
+    position: relative;
+    right: 6%;
+    font-size: 13px;
+  }
+  .account {
+    position: relative;
+    left: 6%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .ink {
+    width: 100%;
+  }
+
+  .account p {
+    font-size: 13px;
+    padding: 0px;
+    width: 100%;
+  }
+  .ink {
+    font-size: 13px !important;
+  }
+
+  .login input {
+    width: 300px;
+  }
+  .login-btn {
+    width: 300px;
+  }
+  .login {
+    gap: 2px;
+  }
+  .dropdown {
+    width: 300px;
+  }
+}
+@media (max-width: 325px) {
+  body {
+    height: 100vh;
+    background-color: white;
+  }
+
+  .first-con {
+    position: relative;
+    left: 45%;
+    margin-top: 30px;
+  }
+  .second-con {
+    display: none;
+  }
+  .first-con {
+    margin-left: -120px;
+    padding: 0px;
+  }
+  .first-con h2 {
+    margin-top: -65px;
+    font-size: 25px;
+  }
+  .first-con h4 {
+    font-size: 18px;
+  }
+  .first-con p {
+    width: 290px !important;
+    font-size: 12px;
+  }
+  label {
+    font-size: 13px;
+  }
+  .remember label {
+    font-size: 13px;
+  }
+  .forgot-password {
+    position: relative;
+    right: 6%;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .account {
+    position: relative;
+    font-weight: 600;
+    left: 2%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .account p {
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0px;
+    width: 100%;
+  }
+  .account a {
+    position: relative;
+    left: -9%;
+    width: 50%;
+    font-weight: 600 !important;
+  }
+  .ink {
+    width: 100%;
+    font-size: 12px !important;
+  }
+  .login {
+    gap: 2px;
+  }
+  .login input {
+    width: 270px;
+  }
+  .login-btn {
+    height: 35px;
+    width: 270px;
+  }
+  .dropdown {
+    width: 270px;
+  }
+}
